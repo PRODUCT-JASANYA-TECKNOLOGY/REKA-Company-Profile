@@ -56,3 +56,40 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Docker Setup (PHP 8.4 + Nginx + FrankenPHP)
+
+Project ini sudah disiapkan untuk Docker dengan:
+
+- `app`: PHP 8.4 (`php-fpm`) + extension yang umum dipakai Laravel/Filament (`intl`, `gd`, `mbstring`, `bcmath`, `zip`, `exif`, `pdo_mysql`, `pdo_sqlite`, dll).
+- `nginx`: reverse proxy ke `app` (default dipakai).
+- `frankenphp`: opsi server alternatif (jalan lewat profile Docker Compose).
+- `db`: sudah disiapkan, tapi masih di-comment karena sementara pakai database lokal.
+
+### Jalankan mode Nginx (default)
+
+```bash
+docker compose up -d --build
+```
+
+Akses app: `http://localhost:8080`
+
+### Jalankan mode FrankenPHP
+
+```bash
+docker compose --profile frankenphp up -d --build frankenphp
+```
+
+Akses app: `http://localhost:8081`
+
+### Command Laravel di container
+
+```bash
+docker compose exec app composer install
+docker compose exec app php artisan key:generate
+docker compose exec app php artisan migrate
+```
+
+### Mengaktifkan database container nanti
+
+Edit `docker-compose.yml`, lalu uncomment service `db` dan blok `volumes` untuk `db_data`.

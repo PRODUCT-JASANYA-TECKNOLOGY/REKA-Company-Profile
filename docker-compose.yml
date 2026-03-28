@@ -1,0 +1,62 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    container_name: laravel13_app
+    user: "${APP_UID:-1000}:${APP_GID:-1000}"
+    working_dir: /var/www/html
+    volumes:
+      - ./:/var/www/html
+    networks:
+      - laravel
+
+  nginx:
+    image: nginx:1.27-alpine
+    container_name: laravel13_nginx
+    depends_on:
+      - app
+    ports:
+      - "${APP_PORT:-8088}:80"
+    volumes:
+      - ./:/var/www/html
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      - laravel
+
+  frankenphp:
+    build:
+      context: .
+      dockerfile: docker/frankenphp/Dockerfile
+    container_name: laravel13_frankenphp
+    profiles:
+      - frankenphp
+    ports:
+      - "${FRANKENPHP_PORT:-8081}:80"
+    volumes:
+      - ./:/app
+    networks:
+      - laravel
+
+  # db:
+  #   image: mysql:8.4
+  #   container_name: laravel13_db
+  #   restart: unless-stopped
+  #   environment:
+  #     MYSQL_DATABASE: ${DB_DATABASE:-laravel}
+  #     MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-root}
+  #     MYSQL_USER: ${DB_USERNAME:-laravel}
+  #     MYSQL_PASSWORD: ${DB_PASSWORD:-root}
+  #   ports:
+  #     - "${DB_FORWARD_PORT:-3306}:3306"
+  #   volumes:
+  #     - db_data:/var/lib/mysql
+  #   networks:
+  #     - laravel
+
+networks:
+  laravel:
+    driver: bridge
+
+# volumes:
+#   db_data:

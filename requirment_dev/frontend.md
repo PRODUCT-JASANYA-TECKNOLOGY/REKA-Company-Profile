@@ -280,7 +280,31 @@ resources/views/
 
 ---
 
-## 8. Routing (`routes/web.php`)
+## 8. Rendering & Wiring Data (Controller)
+
+> **Penting**: Setiap halaman *harus* memiliki Controller. Hal ini ditujukan agar proses *wiring data* (seperti mengambil data dari database, memformat data, dsb) terpisah dari Route dan View.
+
+**`app/Http/Controllers/HomeController.php`**
+```php
+<?php
+
+namespace App\Http\Controllers;
+
+class HomeController extends Controller
+{
+    public function index()
+    {
+        // Proses wiring data di sini (jika ada)
+        return view('pages.home');
+    }
+}
+```
+
+---
+
+## 9. Routing (`routes/web.php`)
+
+Gunakan pemanggilan class Controller di file *routing* alih-alih menggunakan *closure*.
 
 ```php
 use App\Http\Controllers\HomeController;

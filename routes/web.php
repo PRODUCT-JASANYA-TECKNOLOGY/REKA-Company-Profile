@@ -2,12 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LayananController;
+use App\Http\Controllers\ProsesController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-
-// Placeholders for other pages to prevent route missing errors
-Route::get('/layanan', function () { return "Layanan Page Placeholder"; })->name('layanan');
-Route::get('/proses', function () { return "Proses Page Placeholder"; })->name('proses');
+Route::get('/layanan', [LayananController::class, 'index'])->name('layanan');
+Route::get('/proses', [ProsesController::class, 'index'])->name('proses');
 Route::get('/portofolio', function () { return "Portofolio Page Placeholder"; })->name('portofolio');
 Route::get('/kontak', function () { return "Kontak Page Placeholder"; })->name('kontak');
 

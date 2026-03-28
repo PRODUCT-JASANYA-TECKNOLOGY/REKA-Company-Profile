@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>REKA — Solusi Digital Jasanya.id</title>
+  <link rel="stylesheet" href="assets/reka-min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/tw-config.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-white text-gray-950">
+
+<!-- NAVBAR -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-transparent transition-[border-color,box-shadow] duration-300">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-16 flex items-center justify-between">
+    <a href="index.html"><img src="https://customer-assets.emergentagent.com/job_reka-build/artifacts/sh4af1yg_Logo%20REKA%20%281%29.png" alt="REKA" class="h-12 w-auto object-contain block" /></a>
+    <ul class="hidden lg:flex items-center gap-6 list-none">
+      <li><a href="index.html" class="nav-link-item text-sm font-medium text-gray-500 hover:text-gray-950 transition-colors">Beranda</a></li>
+      <li><a href="layanan.html" class="nav-link-item text-sm font-medium text-gray-500 hover:text-gray-950 transition-colors">Layanan</a></li>
+      <li><a href="proses.html" class="nav-link-item text-sm font-medium text-gray-500 hover:text-gray-950 transition-colors">Proses</a></li>
+      <li><a href="portofolio.html" class="nav-link-item text-sm font-medium text-gray-500 hover:text-gray-950 transition-colors">Portofolio</a></li>
+      <li><a href="produk.html" class="nav-link-item text-sm font-medium text-gray-500 hover:text-gray-950 transition-colors">Produk</a></li>
+      <li><a href="blog.html" class="nav-link-item text-sm font-medium text-gray-500 hover:text-gray-950 transition-colors">Blog</a></li>
+      <li><a href="kontak.html" class="nav-link-item text-sm font-medium text-gray-500 hover:text-gray-950 transition-colors">Kontak</a></li>
+    </ul>
+    <a href="kontak.html" class="hidden lg:inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gray-950 text-white text-sm font-medium border border-gray-950 hover:bg-gray-800 transition-colors">Mulai Proyek</a>
+    <button id="hamburger" class="lg:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-5 h-5"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-200 bg-white">
+    <ul class="px-5 py-4 flex flex-col gap-3 list-none">
+      <li><a href="index.html" class="nav-link-item text-base font-medium text-gray-600 hover:text-gray-950 block py-1">Beranda</a></li>
+      <li><a href="layanan.html" class="nav-link-item text-base font-medium text-gray-600 hover:text-gray-950 block py-1">Layanan</a></li>
+      <li><a href="proses.html" class="nav-link-item text-base font-medium text-gray-600 hover:text-gray-950 block py-1">Proses</a></li>
+      <li><a href="portofolio.html" class="nav-link-item text-base font-medium text-gray-600 hover:text-gray-950 block py-1">Portofolio</a></li>
+      <li><a href="produk.html" class="nav-link-item text-base font-medium text-gray-600 hover:text-gray-950 block py-1">Produk</a></li>
+      <li><a href="blog.html" class="nav-link-item text-base font-medium text-gray-600 hover:text-gray-950 block py-1">Blog</a></li>
+      <li><a href="kontak.html" class="nav-link-item text-base font-medium text-gray-600 hover:text-gray-950 block py-1">Kontak</a></li>
+    </ul>
+    <div class="px-5 pb-5"><a href="kontak.html" class="flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-gray-950 text-white text-sm font-medium">Mulai Proyek</a></div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="relative min-h-screen flex flex-col justify-center overflow-hidden bg-white">
+  <div class="grid-pattern absolute inset-0 opacity-40"></div>
+  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(255,255,255,.97) 0%,transparent 70%)"></div>
+  <div class="absolute bottom-0 left-0 right-0 h-40 pointer-events-none" style="background:linear-gradient(to top,#fff,transparent)"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 pt-28 pb-24">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div class="anim-fade-up">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[0.7rem] font-medium tracking-widest uppercase bg-gray-100 text-gray-500 border border-gray-200 mb-8">
+          <span class="w-2 h-2 rounded-full bg-gray-950 inline-block"></span>Solusi Digital Profesional
+        </div>
+        <h1 class="font-grotesk text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight tracking-[-0.04em] mb-6">
+          Kami Bangun<br><span class="text-gray-400">Sistem Digital</span><br>yang Tumbuh
+        </h1>
+        <p class="text-lg leading-relaxed text-gray-500 mb-10 max-w-lg">Mulai dari website, aplikasi, hingga sistem kompleks &mdash; REKA membantu bisnis Anda tumbuh dengan solusi digital yang scalable dan terpercaya.</p>
+        <div class="flex flex-wrap gap-3 mb-12">
+          <a href="kontak.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gray-950 text-white text-sm font-medium border border-gray-950 hover:bg-gray-800 transition-colors group">
+            Mulai Proyek <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-0.5 transition-transform"></i>
+          </a>
+          <a href="layanan.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-transparent text-gray-950 text-sm font-medium border border-gray-200 hover:bg-gray-100 hover:border-gray-400 transition-colors">Lihat Layanan</a>
+        </div>
+        <div class="flex flex-wrap gap-8">
+          <div><div class="font-grotesk text-2xl font-bold">50+</div><div class="text-xs text-gray-500 mt-0.5">Proyek Selesai</div></div>
+          <div><div class="font-grotesk text-2xl font-bold">98%</div><div class="text-xs text-gray-500 mt-0.5">Klien Puas</div></div>
+          <div><div class="font-grotesk text-2xl font-bold">5 Thn</div><div class="text-xs text-gray-500 mt-0.5">Pengalaman</div></div>
+        </div>
+      </div>
+      <!-- Hero visual -->
+      <div class="relative hidden lg:flex items-center justify-center">
+        <div class="relative w-full max-w-md">
+          <div class="anim-float rounded-2xl overflow-hidden border border-gray-200 bg-white shadow-xl">
+            <div class="flex items-center gap-1.5 px-4 py-3 bg-gray-100 border-b border-gray-200">
+              <div class="w-2.5 h-2.5 rounded-full bg-gray-300"></div><div class="w-2.5 h-2.5 rounded-full bg-gray-300"></div><div class="w-2.5 h-2.5 rounded-full bg-gray-300"></div>
+              <div class="ml-4 flex-1 h-5 rounded-md bg-gray-200"></div>
+            </div>
+            <div class="p-6 hero-code">
+              <div class="flex gap-3 mb-2.5"><span class="text-gray-400">01</span><span><span class="text-gray-700">const</span> <span class="text-gray-900">solusi</span> <span class="text-gray-500">=</span> <span class="text-gray-700">await</span> <span class="text-gray-900">reka</span><span class="text-gray-500">.</span><span class="text-gray-800">bangun</span><span class="text-gray-500">(&#123;</span></span></div>
+              <div class="flex gap-3 mb-2.5"><span class="text-gray-400">02</span><span class="ml-4"><span class="text-gray-600">tipe</span><span class="text-gray-500">:</span> <span class="text-gray-800">&ldquo;scalable&rdquo;</span><span class="text-gray-500">,</span></span></div>
+              <div class="flex gap-3 mb-2.5"><span class="text-gray-400">03</span><span class="ml-4"><span class="text-gray-600">kualitas</span><span class="text-gray-500">:</span> <span class="text-gray-800">&ldquo;enterprise&rdquo;</span><span class="text-gray-500">,</span></span></div>
+              <div class="flex gap-3 mb-2.5"><span class="text-gray-400">04</span><span class="ml-4"><span class="text-gray-600">tepat_waktu</span><span class="text-gray-500">:</span> <span class="text-gray-700">true</span></span></div>
+              <div class="flex gap-3 mb-4"><span class="text-gray-400">05</span><span class="text-gray-500">&#125;);</span></div>
+              <div class="pt-4 border-t border-gray-200">
+                <div class="flex items-center gap-2 mb-2"><div class="w-1.5 h-1.5 rounded-full bg-gray-500"></div><span class="text-gray-500 text-[0.7rem]">Membangun solusi...</span></div>
+                <div class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full" style="background:#4a7c59"></div><span class="text-[0.7rem]" style="color:#4a7c59">&check; Deploy berhasil</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="absolute -top-4 -right-4 rounded-xl px-4 py-2.5 bg-white border border-gray-200 shadow-md font-grotesk">
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 rounded-full anim-pulse" style="background:#4a7c59"></div>
+              <span class="text-sm font-medium">Sistem Online</span>
+            </div>
+          </div>
+          <div class="absolute -bottom-4 -left-8 rounded-xl px-4 py-3 bg-white border border-gray-200 shadow-md">
+            <div class="text-[0.7rem] text-gray-500 mb-1">Skor Performa</div>
+            <div class="font-grotesk text-2xl font-bold">99/100</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40">
+    <span class="text-[0.65rem] tracking-widest uppercase text-gray-500">Gulir</span>
+    <div class="w-2 h-2 rounded-full bg-gray-950 anim-scroll-dot"></div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="py-14 border-t border-b border-gray-200 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 flex flex-col md:flex-row items-center gap-8">
+    <div class="flex-shrink-0 text-center md:text-left">
+      <p class="text-sm text-gray-500">Dipercaya oleh<br /><span class="font-grotesk text-[1.1rem] font-semibold text-gray-950">bisnis terkemuka</span></p>
+    </div>
+    <div class="hidden md:block w-px h-12 bg-gray-200"></div>
+    <div class="flex-1 overflow-hidden relative">
+      <div class="absolute left-0 top-0 bottom-0 w-16 z-10 pointer-events-none" style="background:linear-gradient(to right,#fff,transparent)"></div>
+      <div class="absolute right-0 top-0 bottom-0 w-16 z-10 pointer-events-none" style="background:linear-gradient(to left,#fff,transparent)"></div>
+      <div class="flex">
+        <div class="anim-marquee flex gap-5">
+          <div class="flex-shrink-0 flex items-center gap-2.5 px-4 py-2.5 rounded-xl border border-gray-200 bg-gray-100 min-w-[130px]"><div class="w-7 h-7 rounded-lg bg-gray-950 flex items-center justify-center flex-shrink-0"><span class="text-white font-bold font-grotesk" style="font-size:8px">TN</span></div><span class="text-sm font-medium text-gray-600 font-grotesk">TechNova</span></div>
+          <div class="flex-shrink-0 flex items-center gap-2.5 px-4 py-2.5 rounded-xl border border-gray-200 bg-gray-100 min-w-[130px]"><div class="w-7 h-7 rounded-lg bg-gray-950 flex items-center justify-center flex-shrink-0"><span class="text-white font-bold font-grotesk" style="font-size:8px">GG</span></div><span class="text-sm font-medium text-gray-600 font-grotesk">Griya Group</span></div>
+          <div class="flex-shrink-0 flex items-center gap-2.5 px-4 py-2.5 rounded-xl border border-gray-200 bg-gray-100 min-w-[130px]"><div class="w-7 h-7 rounded-lg bg-gray-950 flex items-center justify-center flex-shrink-0"><span class="text-white font-bold font-grotesk" style="font-size:8px">HL</span></div><span class="text-sm font-medium text-gray-600 font-grotesk">HealthLink</span></div>
+          <div class="flex-shrink-0 flex items-center gap-2.5 px-4 py-2.5 rounded-xl border border-gray-200 bg-gray-100 min-w-[130px]"><div class="w-7 h-7 rounded-lg bg-gray-950 flex items-center justify-center flex-shrink-0"><span class="text-white font-bold font-grotesk" style="font-size:8px">DF</span></div><span class="text-sm font-medium text-gray-600 font-grotesk">DataFlow</span></div>
+          <div class="flex-shrink-0 flex items-center gap-2.5 px-4 py-2.5 rounded-xl border border-gray-200 bg-gray-100 min-w-[130px]"><div class="w-7 h-7 rounded-lg bg-gray-950 flex items-center justify-center flex-shrink-0"><span class="text-white font-bold font-grotesk" style="font-size:8px">ET</span></div><span class="text-sm font-medium text-gray-600 font-grotesk">EduTrack</span></div>
+          <div class="flex-shrink-0 flex items-center gap-2.5 px-4 py-2.5 rounded-xl border border-gray-200 bg-gray-100 min-w-[130px]"><div class="w-7 h-7 rounded-lg bg-gray-950 flex items-center justify-center flex-shrink-0"><span class="text-white font-bold font-grotesk" style="font-size:8px">LS</span></div><span class="text-sm font-medium text-gray-600 font-grotesk">LogiStar</span></div>
+          <div class="flex-shrink-0 flex items-center gap-2.5 px-4 py-2.5 rounded-xl border border-gray-200 bg-gray-100 min-w-[130px]"><div class="w-7 h-7 rounded-lg bg-gray-950 flex items-center justify-center flex-shrink-0"><span class="text-white font-bold font-grotesk" style="font-size:8px">FP</span></div><span class="text-sm font-medium text-gray-600 font-grotesk">FinancePro</span></div>
+          <div class="flex-shrink-0 flex items-center gap-2.5 px-4 py-2.5 rounded-xl border border-gray-200 bg-gray-100 min-w-[130px]"><div class="w-7 h-7 rounded-lg bg-gray-950 flex items-center justify-center flex-shrink-0"><span class="text-white font-bold font-grotesk" style="font-size:8px">RN</span></div><span class="text-sm font-medium text-gray-600 font-grotesk">RetailNow</span></div>
+          <!-- duplicate -->
+          <div class="flex-shrink-0 flex items-center gap-2.5 px-4 py-2.5 rounded-xl border border-gray-200 bg-gray-100 min-w-[130px]"><div class="w-7 h-7 rounded-lg bg-gray-950 flex items-center justify-center flex-shrink-0"><span class="text-white font-bold font-grotesk" style="font-size:8px">TN</span></div><span class="text-sm font-medium text-gray-600 font-grotesk">TechNova</span></div>
+          <div class="flex-shrink-0 flex items-center gap-2.5 px-4 py-2.5 rounded-xl border border-gray-200 bg-gray-100 min-w-[130px]"><div class="w-7 h-7 rounded-lg bg-gray-950 flex items-center justify-center flex-shrink-0"><span class="text-white font-bold font-grotesk" style="font-size:8px">GG</span></div><span class="text-sm font-medium text-gray-600 font-grotesk">Griya Group</span></div>
+          <div class="flex-shrink-0 flex items-center gap-2.5 px-4 py-2.5 rounded-xl border border-gray-200 bg-gray-100 min-w-[130px]"><div class="w-7 h-7 rounded-lg bg-gray-950 flex items-center justify-center flex-shrink-0"><span class="text-white font-bold font-grotesk" style="font-size:8px">HL</span></div><span class="text-sm font-medium text-gray-600 font-grotesk">HealthLink</span></div>
+          <div class="flex-shrink-0 flex items-center gap-2.5 px-4 py-2.5 rounded-xl border border-gray-200 bg-gray-100 min-w-[130px]"><div class="w-7 h-7 rounded-lg bg-gray-950 flex items-center justify-center flex-shrink-0"><span class="text-white font-bold font-grotesk" style="font-size:8px">DF</span></div><span class="text-sm font-medium text-gray-600 font-grotesk">DataFlow</span></div>
+          <div class="flex-shrink-0 flex items-center gap-2.5 px-4 py-2.5 rounded-xl border border-gray-200 bg-gray-100 min-w-[130px]"><div class="w-7 h-7 rounded-lg bg-gray-950 flex items-center justify-center flex-shrink-0"><span class="text-white font-bold font-grotesk" style="font-size:8px">FP</span></div><span class="text-sm font-medium text-gray-600 font-grotesk">FinancePro</span></div>
+          <div class="flex-shrink-0 flex items-center gap-2.5 px-4 py-2.5 rounded-xl border border-gray-200 bg-gray-100 min-w-[130px]"><div class="w-7 h-7 rounded-lg bg-gray-950 flex items-center justify-center flex-shrink-0"><span class="text-white font-bold font-grotesk" style="font-size:8px">RN</span></div><span class="text-sm font-medium text-gray-600 font-grotesk">RetailNow</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LAYANAN -->
+<section class="py-24 lg:py-32 white-grid-section bg-white">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-14">
+      <div>
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[0.7rem] font-medium tracking-widest uppercase bg-gray-100 text-gray-500 border border-gray-200">Apa yang Kami Lakukan</span>
+        <h2 class="font-grotesk text-4xl sm:text-5xl font-bold tracking-[-0.03em] mt-3">Layanan untuk<br><span class="text-gray-300">skala bisnis Anda</span></h2>
+      </div>
+      <a href="layanan.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-transparent text-gray-950 text-sm font-medium border border-gray-200 hover:bg-gray-100 hover:border-gray-400 transition-colors flex-shrink-0">Lihat Semua <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="bg-white border border-gray-200 rounded-xl p-7 flex flex-col hover:-translate-y-0.5 hover:shadow-card-hover hover:border-gray-400 transition-[transform,box-shadow,border-color] duration-200">
+        <div class="w-10 h-10 rounded-[10px] flex items-center justify-center bg-gray-100 text-gray-900 mb-5"><i data-lucide="code-2" class="w-4.5 h-4.5"></i></div>
+        <h3 class="font-grotesk text-[0.9375rem] font-semibold mb-2">Custom Software Development</h3>
+        <p class="text-sm leading-relaxed text-gray-500 flex-1">Pengembangan sistem software sesuai kebutuhan spesifik bisnis Anda &mdash; bukan template, tapi solusi yang dirancang khusus.</p>
+        <div class="mt-5 pt-5 border-t border-gray-200"><span class="text-xs text-gray-400">Layanan Utama</span></div>
+      </div>
+      <div class="bg-white border border-gray-200 rounded-xl p-7 flex flex-col hover:-translate-y-0.5 hover:shadow-card-hover hover:border-gray-400 transition-[transform,box-shadow,border-color] duration-200">
+        <div class="w-10 h-10 rounded-[10px] flex items-center justify-center bg-gray-100 text-gray-900 mb-5"><i data-lucide="globe" class="w-4.5 h-4.5"></i></div>
+        <h3 class="font-grotesk text-[0.9375rem] font-semibold mb-2">Web Development</h3>
+        <p class="text-sm leading-relaxed text-gray-500 flex-1">Website company profile hingga web application kompleks yang performatif, aman, dan mudah dikelola.</p>
+        <div class="mt-5 pt-5 border-t border-gray-200"><span class="text-xs text-gray-400">Populer</span></div>
+      </div>
+      <div class="bg-white border border-gray-200 rounded-xl p-7 flex flex-col hover:-translate-y-0.5 hover:shadow-card-hover hover:border-gray-400 transition-[transform,box-shadow,border-color] duration-200">
+        <div class="w-10 h-10 rounded-[10px] flex items-center justify-center bg-gray-100 text-gray-900 mb-5"><i data-lucide="smartphone" class="w-4.5 h-4.5"></i></div>
+        <h3 class="font-grotesk text-[0.9375rem] font-semibold mb-2">Mobile App Development</h3>
+        <p class="text-sm leading-relaxed text-gray-500 flex-1">Aplikasi Android dan iOS yang intuitif, cepat, dan siap untuk skala jutaan pengguna.</p>
+        <div class="mt-5 pt-5 border-t border-gray-200"><span class="text-xs text-gray-400">iOS &amp; Android</span></div>
+      </div>
+      <div class="bg-white border border-gray-200 rounded-xl p-7 flex flex-col hover:-translate-y-0.5 hover:shadow-card-hover hover:border-gray-400 transition-[transform,box-shadow,border-color] duration-200">
+        <div class="w-10 h-10 rounded-[10px] flex items-center justify-center bg-gray-100 text-gray-900 mb-5"><i data-lucide="server" class="w-4.5 h-4.5"></i></div>
+        <h3 class="font-grotesk text-[0.9375rem] font-semibold mb-2">System Architecture</h3>
+        <p class="text-sm leading-relaxed text-gray-500 flex-1">Perancangan arsitektur sistem yang scalable, efisien, dan siap menghadapi pertumbuhan bisnis jangka panjang.</p>
+        <div class="mt-5 pt-5 border-t border-gray-200"><span class="text-xs text-gray-400">Enterprise</span></div>
+      </div>
+      <div class="bg-white border border-gray-200 rounded-xl p-7 flex flex-col hover:-translate-y-0.5 hover:shadow-card-hover hover:border-gray-400 transition-[transform,box-shadow,border-color] duration-200">
+        <div class="w-10 h-10 rounded-[10px] flex items-center justify-center bg-gray-100 text-gray-900 mb-5"><i data-lucide="workflow" class="w-4.5 h-4.5"></i></div>
+        <h3 class="font-grotesk text-[0.9375rem] font-semibold mb-2">DevOps &amp; Automasi</h3>
+        <p class="text-sm leading-relaxed text-gray-500 flex-1">CI/CD pipeline, deployment otomatis, dan workflow automation yang mempercepat delivery.</p>
+        <div class="mt-5 pt-5 border-t border-gray-200"><span class="text-xs text-gray-400">Infrastruktur</span></div>
+      </div>
+      <div class="bg-white border border-gray-200 rounded-xl p-7 flex flex-col hover:-translate-y-0.5 hover:shadow-card-hover hover:border-gray-400 transition-[transform,box-shadow,border-color] duration-200">
+        <div class="w-10 h-10 rounded-[10px] flex items-center justify-center bg-gray-100 text-gray-900 mb-5"><i data-lucide="plug" class="w-4.5 h-4.5"></i></div>
+        <h3 class="font-grotesk text-[0.9375rem] font-semibold mb-2">API &amp; Integrasi Sistem</h3>
+        <p class="text-sm leading-relaxed text-gray-500 flex-1">Menghubungkan sistem-sistem yang ada agar bekerja sebagai satu ekosistem yang mulus dan efisien.</p>
+        <div class="mt-5 pt-5 border-t border-gray-200"><span class="text-xs text-gray-400">Integrasi</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KENAPA REKA -->
+<section class="py-24 lg:py-32 bg-dark dark-dot-pattern">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-2 gap-16 items-start">
+    <div>
+      <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[0.7rem] font-medium tracking-widest uppercase bg-dark-card text-gray-400 border border-dark-border">Kenapa REKA</span>
+      <h2 class="font-grotesk text-4xl sm:text-5xl font-bold tracking-[-0.03em] text-white mt-3 mb-4">Kami bangun sistem,<br><span class="text-gray-600">bukan sekadar kode</span></h2>
+      <p class="text-base leading-relaxed text-[#9a9a9a] mb-8">REKA adalah mitra engineering untuk bisnis yang serius membangun infrastruktur digital. Kami menggabungkan keahlian teknis dengan pemahaman bisnis untuk hasil yang berdampak.</p>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="rounded-xl p-4 bg-dark-card border border-dark-border"><div class="font-grotesk text-2xl font-bold text-white mb-1">50+</div><div class="text-xs text-gray-600">Proyek selesai</div></div>
+        <div class="rounded-xl p-4 bg-dark-card border border-dark-border"><div class="font-grotesk text-2xl font-bold text-white mb-1">98%</div><div class="text-xs text-gray-600">Tepat waktu</div></div>
+        <div class="rounded-xl p-4 bg-dark-card border border-dark-border"><div class="font-grotesk text-2xl font-bold text-white mb-1">3x</div><div class="text-xs text-gray-600">Rata-rata peningkatan</div></div>
+        <div class="rounded-xl p-4 bg-dark-card border border-dark-border"><div class="font-grotesk text-2xl font-bold text-white mb-1">24 Jam</div><div class="text-xs text-gray-600">Garansi respons</div></div>
+      </div>
+    </div>
+    <div class="flex flex-col gap-3">
+      <div class="flex gap-4 p-5 rounded-xl bg-dark-card border border-dark-border hover:border-gray-600 transition-colors">
+        <span class="font-grotesk text-xs font-bold text-gray-700 flex-shrink-0 pt-0.5">01</span>
+        <div><h4 class="font-grotesk text-sm font-semibold text-white mb-1.5">Fokus Solusi Bisnis</h4><p class="text-sm leading-relaxed text-gray-600">Setiap keputusan teknis selalu berangkat dari kebutuhan bisnis Anda, bukan sekadar spesifikasi teknis.</p></div>
+      </div>
+      <div class="flex gap-4 p-5 rounded-xl bg-dark-card border border-dark-border hover:border-gray-600 transition-colors">
+        <span class="font-grotesk text-xs font-bold text-gray-700 flex-shrink-0 pt-0.5">02</span>
+        <div><h4 class="font-grotesk text-sm font-semibold text-white mb-1.5">Arsitektur Scalable</h4><p class="text-sm leading-relaxed text-gray-600">Sistem yang kami bangun dirancang untuk tumbuh bersama bisnis Anda &mdash; dari 100 hingga jutaan pengguna.</p></div>
+      </div>
+      <div class="flex gap-4 p-5 rounded-xl bg-dark-card border border-dark-border hover:border-gray-600 transition-colors">
+        <span class="font-grotesk text-xs font-bold text-gray-700 flex-shrink-0 pt-0.5">03</span>
+        <div><h4 class="font-grotesk text-sm font-semibold text-white mb-1.5">Kode Bersih &amp; Terjaga</h4><p class="text-sm leading-relaxed text-gray-600">Dokumentasi lengkap, kode yang readable, dan arsitektur yang memudahkan pengembangan masa depan.</p></div>
+      </div>
+      <div class="flex gap-4 p-5 rounded-xl bg-dark-card border border-dark-border hover:border-gray-600 transition-colors">
+        <span class="font-grotesk text-xs font-bold text-gray-700 flex-shrink-0 pt-0.5">04</span>
+        <div><h4 class="font-grotesk text-sm font-semibold text-white mb-1.5">Proses Transparan</h4><p class="text-sm leading-relaxed text-gray-600">Update rutin, sprint terstruktur &mdash; Anda selalu tahu apa yang sedang kami kerjakan.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROSES -->
+<section class="py-24 lg:py-32 bg-white">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-14">
+      <div>
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[0.7rem] font-medium tracking-widest uppercase bg-gray-100 text-gray-500 border border-gray-200">Cara Kami Bekerja</span>
+        <h2 class="font-grotesk text-4xl sm:text-5xl font-bold tracking-[-0.03em] mt-3">Proses yang jelas<br><span class="text-gray-300">dari ide ke produk</span></h2>
+      </div>
+      <a href="proses.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-gray-200 text-gray-950 text-sm font-medium hover:bg-gray-100 hover:border-gray-400 transition-colors flex-shrink-0">Lihat Detail <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="relative p-6 rounded-xl border border-gray-200 bg-white"><div class="font-grotesk text-[0.7rem] font-bold tracking-widest text-gray-300 mb-4">01</div><h3 class="font-grotesk text-xl font-bold mb-3">Discover</h3><p class="text-sm leading-relaxed text-gray-500">Memahami kebutuhan dan masalah bisnis secara mendalam.</p><div class="absolute top-6 -right-2.5 hidden lg:block text-gray-200"><i data-lucide="chevron-right" class="w-4 h-4"></i></div></div>
+      <div class="relative p-6 rounded-xl border border-gray-200 bg-white"><div class="font-grotesk text-[0.7rem] font-bold tracking-widest text-gray-300 mb-4">02</div><h3 class="font-grotesk text-xl font-bold mb-3">Design</h3><p class="text-sm leading-relaxed text-gray-500">Merancang solusi, arsitektur, dan alur sistem.</p><div class="absolute top-6 -right-2.5 hidden lg:block text-gray-200"><i data-lucide="chevron-right" class="w-4 h-4"></i></div></div>
+      <div class="relative p-6 rounded-xl border border-gray-200 bg-white"><div class="font-grotesk text-[0.7rem] font-bold tracking-widest text-gray-300 mb-4">03</div><h3 class="font-grotesk text-xl font-bold mb-3">Build</h3><p class="text-sm leading-relaxed text-gray-500">Pengembangan dengan sprint agile dan demo reguler.</p><div class="absolute top-6 -right-2.5 hidden lg:block text-gray-200"><i data-lucide="chevron-right" class="w-4 h-4"></i></div></div>
+      <div class="relative p-6 rounded-xl border border-gray-200 bg-white"><div class="font-grotesk text-[0.7rem] font-bold tracking-widest text-gray-300 mb-4">04</div><h3 class="font-grotesk text-xl font-bold mb-3">Launch</h3><p class="text-sm leading-relaxed text-gray-500">Deployment, monitoring, dan handoff dokumentasi.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONI -->
+<section class="py-24 lg:py-32 white-grid-section bg-white">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="text-center mb-16">
+      <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[0.7rem] font-medium tracking-widest uppercase bg-gray-100 text-gray-500 border border-gray-200">Testimoni</span>
+      <h2 class="font-grotesk text-4xl sm:text-5xl font-bold tracking-[-0.03em] mt-3">Yang Klien Kami<br><span class="text-gray-300">Katakan</span></h2>
+    </div>
+    <div class="hidden md:grid md:grid-cols-3 lg:grid-cols-5 gap-6 items-start">
+      <div class="sticky-note p-5 rounded-xl border border-black/5 bg-[#faf8f3] flex flex-col shadow-note hover:scale-[1.02] hover:!rotate-0 transition-[transform,box-shadow] duration-300" style="transform:rotate(-2deg) translateY(0px);min-height:240px">
+        <i data-lucide="quote" class="w-4 h-4 text-gray-300 mb-3"></i>
+        <p class="text-[0.8125rem] leading-relaxed text-[#4a4a4a] italic flex-1 mb-4">&ldquo;REKA benar-benar mengubah cara operasional kami. Sistem yang mereka bangun jauh melampaui ekspektasi &mdash; cepat, stabil, dan mudah digunakan tim.&rdquo;</p>
+        <div class="flex items-center gap-3 pt-3 border-t border-black/8 mt-auto">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&q=70" alt="Budi" class="w-9 h-9 rounded-full object-cover border-2 border-black/10 flex-shrink-0" />
+          <div><div class="font-grotesk text-xs font-semibold">Budi Santoso</div><div class="text-[0.6875rem] text-gray-500">CEO &mdash; TechNova</div></div>
+        </div>
+      </div>
+      <div class="sticky-note p-5 rounded-xl border border-black/5 bg-[#faf6f0] flex flex-col shadow-note hover:scale-[1.02] hover:!rotate-0 transition-[transform,box-shadow] duration-300" style="transform:rotate(1.5deg) translateY(18px);min-height:240px">
+        <i data-lucide="quote" class="w-4 h-4 text-gray-300 mb-3"></i>
+        <p class="text-[0.8125rem] leading-relaxed text-[#4a4a4a] italic flex-1 mb-4">&ldquo;Tim REKA sangat profesional. Mereka tidak hanya membangun aplikasi, tapi benar-benar memahami kebutuhan bisnis kami dan memberikan solusi terbaik.&rdquo;</p>
+        <div class="flex items-center gap-3 pt-3 border-t border-black/8 mt-auto">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=70" alt="Dewi" class="w-9 h-9 rounded-full object-cover border-2 border-black/10 flex-shrink-0" />
+          <div><div class="font-grotesk text-xs font-semibold">Dewi Rahayu</div><div class="text-[0.6875rem] text-gray-500">Dir. Ops &mdash; Griya Group</div></div>
+        </div>
+      </div>
+      <div class="sticky-note p-5 rounded-xl border border-black/5 bg-[#fbf9f3] flex flex-col shadow-note hover:scale-[1.02] hover:!rotate-0 transition-[transform,box-shadow] duration-300" style="transform:rotate(-1.5deg) translateY(-8px);min-height:240px">
+        <i data-lucide="quote" class="w-4 h-4 text-gray-300 mb-3"></i>
+        <p class="text-[0.8125rem] leading-relaxed text-[#4a4a4a] italic flex-1 mb-4">&ldquo;Proses kerja REKA transparan dan terstruktur. Kami selalu tahu perkembangan proyek tanpa harus mengejar-ngejar tim.&rdquo;</p>
+        <div class="flex items-center gap-3 pt-3 border-t border-black/8 mt-auto">
+          <img src="https://images.unsplash.com/photo-1629425733761-caae3b5f2e50?w=200&q=70" alt="Ahmad" class="w-9 h-9 rounded-full object-cover border-2 border-black/10 flex-shrink-0" />
+          <div><div class="font-grotesk text-xs font-semibold">Ahmad Fauzi</div><div class="text-[0.6875rem] text-gray-500">CTO &mdash; SupplyChain.id</div></div>
+        </div>
+      </div>
+      <div class="sticky-note p-5 rounded-xl border border-black/5 bg-[#faf7f2] flex flex-col shadow-note hover:scale-[1.02] hover:!rotate-0 transition-[transform,box-shadow] duration-300" style="transform:rotate(2deg) translateY(10px);min-height:240px">
+        <i data-lucide="quote" class="w-4 h-4 text-gray-300 mb-3"></i>
+        <p class="text-[0.8125rem] leading-relaxed text-[#4a4a4a] italic flex-1 mb-4">&ldquo;Investasi terbaik yang pernah kami lakukan. Platform yang dibangun REKA meningkatkan efisiensi tim kami hingga 60% dalam 3 bulan.&rdquo;</p>
+        <div class="flex items-center gap-3 pt-3 border-t border-black/8 mt-auto">
+          <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=200&q=70" alt="Siti" class="w-9 h-9 rounded-full object-cover border-2 border-black/10 flex-shrink-0" />
+          <div><div class="font-grotesk text-xs font-semibold">Siti Maharani</div><div class="text-[0.6875rem] text-gray-500">Founder &mdash; HealthLink</div></div>
+        </div>
+      </div>
+      <div class="sticky-note p-5 rounded-xl border border-black/5 bg-[#faf8f4] flex flex-col shadow-note hover:scale-[1.02] hover:!rotate-0 transition-[transform,box-shadow] duration-300" style="transform:rotate(-1deg) translateY(24px);min-height:240px">
+        <i data-lucide="quote" class="w-4 h-4 text-gray-300 mb-3"></i>
+        <p class="text-[0.8125rem] leading-relaxed text-[#4a4a4a] italic flex-1 mb-4">&ldquo;Delivery tepat waktu dan kualitas kode sangat bersih. Tim REKA bekerja seperti mitra strategis, bukan sekadar vendor IT biasa.&rdquo;</p>
+        <div class="flex items-center gap-3 pt-3 border-t border-black/8 mt-auto">
+          <img src="https://images.unsplash.com/photo-1611432579402-7037e3e2c1e4?w=200&q=70" alt="Riko" class="w-9 h-9 rounded-full object-cover border-2 border-black/10 flex-shrink-0" />
+          <div><div class="font-grotesk text-xs font-semibold">Riko Pratama</div><div class="text-[0.6875rem] text-gray-500">Head of Product &mdash; DataFlow</div></div>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile stacked -->
+    <div class="md:hidden flex flex-col gap-6">
+      <div class="p-5 rounded-xl border border-gray-100 bg-[#faf8f3]"><i data-lucide="quote" class="w-4 h-4 text-gray-300 mb-3"></i><p class="text-sm leading-relaxed text-gray-600 italic mb-4">&ldquo;REKA benar-benar mengubah cara operasional kami. Sistem yang mereka bangun jauh melampaui ekspektasi.&rdquo;</p><div class="flex items-center gap-3"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&q=70" class="w-8 h-8 rounded-full object-cover" /><div><div class="font-grotesk text-xs font-semibold">Budi Santoso</div><div class="text-[0.65rem] text-gray-500">CEO &mdash; TechNova</div></div></div></div>
+      <div class="p-5 rounded-xl border border-gray-100 bg-[#faf6f0]"><i data-lucide="quote" class="w-4 h-4 text-gray-300 mb-3"></i><p class="text-sm leading-relaxed text-gray-600 italic mb-4">&ldquo;Tim REKA sangat profesional. Mereka benar-benar memahami kebutuhan bisnis kami.&rdquo;</p><div class="flex items-center gap-3"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&q=70" class="w-8 h-8 rounded-full object-cover" /><div><div class="font-grotesk text-xs font-semibold">Dewi Rahayu</div><div class="text-[0.65rem] text-gray-500">Dir. Ops &mdash; Griya Group</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-24 lg:py-32 bg-white">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid lg:grid-cols-5 gap-16">
+      <div class="lg:col-span-2">
+        <p class="text-[0.7rem] font-medium tracking-widest uppercase text-gray-500 mb-4">Frequently Asked Questions (FAQ)</p>
+        <h2 class="font-grotesk text-3xl sm:text-4xl font-bold tracking-[-0.03em] mb-5 leading-tight">Apa itu REKA?</h2>
+        <p class="text-sm leading-relaxed text-gray-500 mb-8">REKA adalah unit solusi digital dari ekosistem Jasanya.id, berfokus pada pengembangan software, aplikasi web &amp; mobile, serta sistem digital yang scalable untuk bisnis dari berbagai skala.</p>
+        <a href="kontak.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-gray-200 text-gray-950 text-sm font-medium hover:bg-gray-100 hover:border-gray-400 transition-colors">Masih ada pertanyaan? <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
+      </div>
+      <div class="lg:col-span-3">
+        <div class="faq-item border-b border-gray-200"><button class="faq-question w-full flex items-start justify-between gap-4 py-5 bg-transparent border-none cursor-pointer font-grotesk text-sm font-medium text-left text-gray-950" onclick="this.closest('.faq-item').classList.toggle('open')"><span>Apa yang membedakan REKA dari vendor IT lainnya?</span><div class="faq-icon"><i data-lucide="plus" class="w-2.5 h-2.5 text-gray-500"></i></div></button><div class="faq-answer"><p class="text-sm leading-relaxed text-gray-500 pb-5">REKA bukan sekadar vendor coding. Kami adalah mitra engineering yang memahami konteks bisnis Anda. Setiap solusi berangkat dari analisis kebutuhan bisnis yang mendalam. Kami berkomitmen pada kode yang bersih, terdokumentasi, dan mudah dikembangkan di masa depan.</p></div></div>
+        <div class="faq-item border-b border-gray-200"><button class="faq-question w-full flex items-start justify-between gap-4 py-5 bg-transparent border-none cursor-pointer font-grotesk text-sm font-medium text-left text-gray-950" onclick="this.closest('.faq-item').classList.toggle('open')"><span>Berapa lama waktu yang dibutuhkan untuk menyelesaikan proyek?</span><div class="faq-icon"><i data-lucide="plus" class="w-2.5 h-2.5 text-gray-500"></i></div></button><div class="faq-answer"><p class="text-sm leading-relaxed text-gray-500 pb-5">Landing page atau website sederhana: 2&ndash;4 minggu. Aplikasi web dengan fitur standar: 6&ndash;12 minggu. Sistem enterprise atau platform kompleks: 3&ndash;6 bulan. Kami selalu memberikan estimasi realistis setelah proses discovery.</p></div></div>
+        <div class="faq-item border-b border-gray-200"><button class="faq-question w-full flex items-start justify-between gap-4 py-5 bg-transparent border-none cursor-pointer font-grotesk text-sm font-medium text-left text-gray-950" onclick="this.closest('.faq-item').classList.toggle('open')"><span>Apakah REKA menyediakan layanan maintenance setelah proyek selesai?</span><div class="faq-icon"><i data-lucide="plus" class="w-2.5 h-2.5 text-gray-500"></i></div></button><div class="faq-answer"><p class="text-sm leading-relaxed text-gray-500 pb-5">Ya, kami menyediakan layanan maintenance dan support pasca-launch. Paket dukungan mencakup bug fixing, update keamanan, penambahan fitur kecil, dan monitoring performa.</p></div></div>
+        <div class="faq-item border-b border-gray-200"><button class="faq-question w-full flex items-start justify-between gap-4 py-5 bg-transparent border-none cursor-pointer font-grotesk text-sm font-medium text-left text-gray-950" onclick="this.closest('.faq-item').classList.toggle('open')"><span>Bagaimana proses pembayaran dan model harga REKA?</span><div class="faq-icon"><i data-lucide="plus" class="w-2.5 h-2.5 text-gray-500"></i></div></button><div class="faq-answer"><p class="text-sm leading-relaxed text-gray-500 pb-5">Model project-based pricing dengan pembayaran bertahap sesuai milestone: 30% di awal, 40% saat mid-project, dan 30% saat serah terima. Untuk proyek jangka panjang, tersedia model retainer bulanan.</p></div></div>
+        <div class="faq-item border-b border-gray-200"><button class="faq-question w-full flex items-start justify-between gap-4 py-5 bg-transparent border-none cursor-pointer font-grotesk text-sm font-medium text-left text-gray-950" onclick="this.closest('.faq-item').classList.toggle('open')"><span>Teknologi apa saja yang dikuasai tim REKA?</span><div class="faq-icon"><i data-lucide="plus" class="w-2.5 h-2.5 text-gray-500"></i></div></button><div class="faq-answer"><p class="text-sm leading-relaxed text-gray-500 pb-5">Frontend (React, Next.js), backend (Python/FastAPI, Node.js, Go), mobile (React Native, Flutter), database (PostgreSQL, MongoDB, Redis), dan infrastruktur (Docker, Kubernetes, AWS, GCP).</p></div></div>
+        <div class="faq-item border-b border-gray-200"><button class="faq-question w-full flex items-start justify-between gap-4 py-5 bg-transparent border-none cursor-pointer font-grotesk text-sm font-medium text-left text-gray-950" onclick="this.closest('.faq-item').classList.toggle('open')"><span>Apakah saya bisa mendapatkan konsultasi gratis?</span><div class="faq-icon"><i data-lucide="plus" class="w-2.5 h-2.5 text-gray-500"></i></div></button><div class="faq-answer"><p class="text-sm leading-relaxed text-gray-500 pb-5">Tentu! Kami selalu menyediakan sesi konsultasi awal yang gratis dan tanpa komitmen. Tim kami akan mendengarkan kebutuhan Anda dan memberikan rekomendasi solusi terbaik.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-24 lg:py-32 bg-dark dark-dot-pattern text-center">
+  <div class="max-w-4xl mx-auto px-5 lg:px-8">
+    <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[0.7rem] font-medium tracking-widest uppercase bg-dark-card text-gray-400 border border-dark-border mb-6">Siap Mulai?</span>
+    <h2 class="font-grotesk text-5xl lg:text-6xl font-bold tracking-[-0.04em] text-white mb-6">Bangun Produk Digital<br><span class="text-gray-600">Anda Sekarang</span></h2>
+    <p class="text-base leading-relaxed text-[#9a9a9a] max-w-xl mx-auto mb-10">Konsultasikan kebutuhan proyek Anda dengan tim REKA. Gratis, tanpa komitmen, dan kami siap membantu Anda menemukan solusi terbaik.</p>
+    <div class="flex flex-wrap gap-3 justify-center">
+      <a href="kontak.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-gray-950 text-sm font-medium hover:bg-gray-100 transition-colors">Mulai Proyek <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+      <a href="portofolio.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-transparent text-white text-sm font-medium border border-dark-border hover:bg-dark-card transition-colors">Lihat Portofolio</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-gray-200 bg-white">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10">
+      <div class="lg:col-span-2">
+        <a href="index.html"><img src="https://customer-assets.emergentagent.com/job_reka-build/artifacts/sh4af1yg_Logo%20REKA%20%281%29.png" alt="REKA" class="h-10 mb-4" /></a>
+        <p class="text-sm leading-relaxed text-gray-500 max-w-xs mb-5">REKA adalah unit solusi digital dari Jasanya.id yang berfokus pada pengembangan software dan sistem bisnis yang scalable &amp; reliable.</p>
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium bg-gray-100 text-gray-500 border border-gray-200 mb-4">Bagian dari <a href="https://jasanya.id" target="_blank" class="font-semibold text-gray-950 flex items-center gap-1">Jasanya.id <i data-lucide="external-link" class="w-2.5 h-2.5"></i></a></div>
+        <div class="flex flex-col gap-2 mb-4">
+          <a href="mailto:hello@solusidigital.jasanya.id" class="text-sm text-gray-500 hover:text-gray-950 transition-colors flex items-center gap-2"><i data-lucide="mail" class="w-3.5 h-3.5"></i>hello@solusidigital.jasanya.id</a>
+          <a href="https://wa.me/6281234567890" class="text-sm text-gray-500 hover:text-gray-950 transition-colors flex items-center gap-2"><i data-lucide="message-circle" class="w-3.5 h-3.5"></i>+62 812-3456-7890</a>
+        </div>
+        <div class="flex gap-2">
+          <a href="#" class="w-8 h-8 rounded-lg flex items-center justify-center bg-gray-100 text-gray-500 border border-gray-200 hover:bg-gray-950 hover:text-white transition-colors"><i data-lucide="github" class="w-3.5 h-3.5"></i></a>
+          <a href="#" class="w-8 h-8 rounded-lg flex items-center justify-center bg-gray-100 text-gray-500 border border-gray-200 hover:bg-gray-950 hover:text-white transition-colors"><i data-lucide="linkedin" class="w-3.5 h-3.5"></i></a>
+          <a href="#" class="w-8 h-8 rounded-lg flex items-center justify-center bg-gray-100 text-gray-500 border border-gray-200 hover:bg-gray-950 hover:text-white transition-colors"><i data-lucide="instagram" class="w-3.5 h-3.5"></i></a>
+        </div>
+      </div>
+      <div><h4 class="font-grotesk text-sm font-semibold mb-4">Layanan</h4><ul class="flex flex-col gap-2.5 list-none"><li><a href="layanan.html" class="text-sm text-gray-500 hover:text-gray-950 transition-colors">Custom Software</a></li><li><a href="layanan.html" class="text-sm text-gray-500 hover:text-gray-950 transition-colors">Web Development</a></li><li><a href="layanan.html" class="text-sm text-gray-500 hover:text-gray-950 transition-colors">Mobile App</a></li><li><a href="layanan.html" class="text-sm text-gray-500 hover:text-gray-950 transition-colors">DevOps</a></li></ul></div>
+      <div><h4 class="font-grotesk text-sm font-semibold mb-4">Perusahaan</h4><ul class="flex flex-col gap-2.5 list-none"><li><a href="index.html" class="text-sm text-gray-500 hover:text-gray-950 transition-colors">Beranda</a></li><li><a href="proses.html" class="text-sm text-gray-500 hover:text-gray-950 transition-colors">Proses Kerja</a></li><li><a href="portofolio.html" class="text-sm text-gray-500 hover:text-gray-950 transition-colors">Portofolio</a></li><li><a href="blog.html" class="text-sm text-gray-500 hover:text-gray-950 transition-colors">Blog</a></li><li><a href="kontak.html" class="text-sm text-gray-500 hover:text-gray-950 transition-colors">Kontak</a></li></ul></div>
+      <div><h4 class="font-grotesk text-sm font-semibold mb-4">Produk</h4><ul class="flex flex-col gap-2.5 list-none"><li><a href="produk-detail.html?id=reka-cms" class="text-sm text-gray-500 hover:text-gray-950 transition-colors">REKA CMS</a></li><li><a href="produk-detail.html?id=reka-analytics" class="text-sm text-gray-500 hover:text-gray-950 transition-colors">REKA Analytics</a></li><li><a href="produk-detail.html?id=reka-hr" class="text-sm text-gray-500 hover:text-gray-950 transition-colors">REKA HRM</a></li><li><a href="produk-detail.html?id=reka-pos" class="text-sm text-gray-500 hover:text-gray-950 transition-colors">REKA POS</a></li></ul></div>
+    </div>
+  </div>
+  <!-- Cert bar -->
+  <div class="border-t border-gray-200 px-5 lg:px-8 py-5">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 flex-wrap">
+      <div class="flex items-center gap-5 flex-wrap">
+        <div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-gray-950"><span class="font-grotesk text-sm font-bold text-white tracking-[-0.03em]">Jasanya.id</span></div>
+        <div class="flex gap-2">
+          <a href="#" class="w-7 h-7 rounded-full flex items-center justify-center bg-gray-100 border border-gray-200 text-gray-500 hover:bg-gray-300 transition-colors"><i data-lucide="linkedin" class="w-3 h-3"></i></a>
+          <a href="#" class="w-7 h-7 rounded-full flex items-center justify-center bg-gray-100 border border-gray-200 text-gray-500 hover:bg-gray-300 transition-colors"><i data-lucide="instagram" class="w-3 h-3"></i></a>
+          <a href="#" class="w-7 h-7 rounded-full flex items-center justify-center bg-gray-100 border border-gray-200 text-gray-500 hover:bg-gray-300 transition-colors"><i data-lucide="twitter" class="w-3 h-3"></i></a>
+          <a href="#" class="w-7 h-7 rounded-full flex items-center justify-center bg-gray-100 border border-gray-200 text-gray-500 hover:bg-gray-300 transition-colors"><i data-lucide="github" class="w-3 h-3"></i></a>
+        </div>
+      </div>
+      <div class="flex items-center gap-3 flex-wrap">
+        <div class="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-100 border border-gray-200"><div class="w-6 h-6 rounded bg-gray-950 flex items-center justify-center"><span class="text-white font-bold" style="font-size:7px">KI</span></div><div><p class="font-grotesk text-xs font-semibold leading-none">Kominfo</p><p class="text-[10px] text-gray-500 mt-0.5">Terdaftar</p></div></div>
+        <div class="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-100 border border-gray-200"><div class="w-6 h-6 rounded bg-gray-950 flex items-center justify-center"><span class="text-white font-bold" style="font-size:7px">ISO</span></div><div><p class="font-grotesk text-xs font-semibold leading-none">ISO 27001</p><p class="text-[10px] text-gray-500 mt-0.5">Certified</p></div></div>
+        <div class="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-100 border border-gray-200"><div class="w-6 h-6 rounded bg-gray-900 flex items-center justify-center"><span class="text-white font-extrabold" style="font-size:6px">DMCA</span></div><div><p class="font-grotesk text-xs font-semibold leading-none">DMCA</p><p class="text-[10px] text-gray-500 mt-0.5">Protected</p></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-gray-200 px-5 lg:px-8 py-3">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <p class="text-xs text-gray-400">&copy; 2025 REKA &mdash; Bagian dari ekosistem Jasanya.id. Semua hak dilindungi.</p>
+      <p class="text-xs text-gray-400">solusidigital.jasanya.id</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/reka.js"></script>
+</body>
+</html>

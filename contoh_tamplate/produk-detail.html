@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Detail Produk — REKA</title>
+  <link rel="stylesheet" href="assets/reka-min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/tw-config.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-white text-gray-950">
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-transparent transition-[border-color,box-shadow] duration-300">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-16 flex items-center justify-between">
+    <a href="index.html"><img src="https://customer-assets.emergentagent.com/job_reka-build/artifacts/sh4af1yg_Logo%20REKA%20%281%29.png" alt="REKA" class="h-12 w-auto object-contain block" /></a>
+    <ul class="hidden lg:flex items-center gap-6 list-none"><li><a href="index.html" class="nav-link-item text-sm font-medium text-gray-500 hover:text-gray-950 transition-colors">Beranda</a></li><li><a href="layanan.html" class="nav-link-item text-sm font-medium text-gray-500 hover:text-gray-950 transition-colors">Layanan</a></li><li><a href="proses.html" class="nav-link-item text-sm font-medium text-gray-500 hover:text-gray-950 transition-colors">Proses</a></li><li><a href="portofolio.html" class="nav-link-item text-sm font-medium text-gray-500 hover:text-gray-950 transition-colors">Portofolio</a></li><li><a href="produk.html" class="nav-link-item text-sm font-medium text-gray-500 hover:text-gray-950 transition-colors">Produk</a></li><li><a href="blog.html" class="nav-link-item text-sm font-medium text-gray-500 hover:text-gray-950 transition-colors">Blog</a></li><li><a href="kontak.html" class="nav-link-item text-sm font-medium text-gray-500 hover:text-gray-950 transition-colors">Kontak</a></li></ul>
+    <a href="kontak.html" class="hidden lg:inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gray-950 text-white text-sm font-medium hover:bg-gray-800 transition-colors">Mulai Proyek</a>
+    <button id="hamburger" class="lg:hidden p-2"><i data-lucide="menu" class="w-5 h-5"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden border-t border-gray-200 bg-white"><ul class="px-5 py-4 flex flex-col gap-3 list-none"><li><a href="index.html" class="nav-link-item text-base font-medium text-gray-600">Beranda</a></li><li><a href="produk.html" class="nav-link-item text-base font-medium text-gray-600">Produk</a></li><li><a href="kontak.html" class="nav-link-item text-base font-medium text-gray-600">Kontak</a></li></ul><div class="px-5 pb-5"><a href="kontak.html" class="flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-gray-950 text-white text-sm font-medium">Mulai Proyek</a></div></div>
+</nav>
+
+<!-- Page header -->
+<div class="pt-28 pb-12 border-b border-gray-200 white-grid-section bg-white" id="page-header">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <a href="produk.html" class="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-gray-950 transition-colors mb-6" ><i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Semua Produk</a>
+    <div class="flex items-center gap-4 mb-4">
+      <div id="prod-icon" class="w-14 h-14 rounded-2xl flex items-center justify-center bg-gray-100"></div>
+      <div><p id="prod-cat" class="text-sm text-gray-500 mb-1"></p><h1 id="prod-name" class="font-grotesk text-3xl sm:text-4xl font-bold tracking-[-0.03em]"></h1></div>
+    </div>
+    <p id="prod-tagline" class="text-lg text-gray-500 max-w-xl leading-relaxed"></p>
+  </div>
+</div>
+
+<section class="py-12 pb-20">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <!-- Gallery -->
+    <div class="mb-10">
+      <div class="relative rounded-xl overflow-hidden mb-3 bg-gray-100 border border-gray-200" style="height:380px">
+        <img id="gallery-main-img" src="" alt="Screenshot" class="w-full h-full object-cover" />
+        <button class="gallery-btn prev absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white border border-gray-200 flex items-center justify-center shadow-sm hover:bg-gray-100 transition-colors"><i data-lucide="chevron-left" class="w-4 h-4"></i></button>
+        <button class="gallery-btn next absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white border border-gray-200 flex items-center justify-center shadow-sm hover:bg-gray-100 transition-colors"><i data-lucide="chevron-right" class="w-4 h-4"></i></button>
+        <div class="gallery-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2" id="gallery-dots"></div>
+      </div>
+      <div class="flex gap-3" id="gallery-thumbs"></div>
+    </div>
+
+    <div class="grid lg:grid-cols-3 gap-10">
+      <div class="lg:col-span-2">
+        <h2 class="font-grotesk text-2xl font-bold mb-4" id="about-title"></h2>
+        <p id="prod-desc" class="text-[0.9375rem] leading-relaxed text-gray-500 mb-8"></p>
+        <h3 class="font-grotesk text-xl font-bold mb-4">Fitur Lengkap</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10" id="feat-list"></div>
+        <h3 class="font-grotesk text-xl font-bold mb-4">Ulasan Pengguna</h3>
+        <div class="flex flex-col gap-3">
+          <div class="p-5 rounded-xl bg-gray-100 border border-gray-200"><div class="flex items-center gap-2 mb-2"><span class="text-gray-700">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="font-grotesk text-xs font-semibold">Arif H.</span><span class="text-xs text-gray-500">&mdash; RetailNow</span></div><p class="text-sm text-gray-500">Sangat mudah digunakan, tim kami langsung produktif dari hari pertama.</p></div>
+          <div class="p-5 rounded-xl bg-gray-100 border border-gray-200"><div class="flex items-center gap-2 mb-2"><span class="text-gray-700">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="font-grotesk text-xs font-semibold">Sarah K.</span><span class="text-xs text-gray-500">&mdash; LogiStar</span></div><p class="text-sm text-gray-500">Support-nya responsif dan fiturnya benar-benar sesuai kebutuhan kami.</p></div>
+          <div class="p-5 rounded-xl bg-gray-100 border border-gray-200"><div class="flex items-center gap-2 mb-2"><span class="text-gray-700">&#9733;&#9733;&#9733;&#9733;</span><span class="font-grotesk text-xs font-semibold">Fajar M.</span><span class="text-xs text-gray-500">&mdash; FinancePro</span></div><p class="text-sm text-gray-500">Kualitas produknya bagus. Menunggu beberapa fitur yang masih dalam pengembangan.</p></div>
+        </div>
+      </div>
+      <div class="lg:col-span-1">
+        <div class="sticky top-24 bg-gray-100 border border-gray-200 rounded-xl p-6">
+          <p class="text-xs text-gray-500 mb-1">Harga mulai dari</p>
+          <p id="prod-price" class="font-grotesk text-2xl font-bold mb-3"></p>
+          <span id="prod-status-badge" class="inline-block text-[0.7rem] font-semibold px-2.5 py-1 rounded-full mb-5"></span>
+          <a href="kontak.html" class="flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gray-950 text-white text-sm font-medium hover:bg-gray-800 transition-colors mb-2.5">Mulai Sekarang <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
+          <a href="kontak.html" class="flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-gray-200 text-gray-950 text-sm font-medium hover:bg-white transition-colors">Minta Demo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="border-t border-gray-200 bg-white"><div class="max-w-7xl mx-auto px-5 lg:px-8 py-10"><div class="grid grid-cols-1 md:grid-cols-4 gap-8"><div><a href="index.html"><img src="https://customer-assets.emergentagent.com/job_reka-build/artifacts/sh4af1yg_Logo%20REKA%20%281%29.png" alt="REKA" class="h-10 mb-4" /></a><p class="text-sm text-gray-500 max-w-xs">REKA adalah unit solusi digital dari Jasanya.id.</p></div><div><h4 class="font-grotesk text-sm font-semibold mb-4">Layanan</h4><ul class="flex flex-col gap-2 list-none"><li><a href="layanan.html" class="text-sm text-gray-500 hover:text-gray-950">Custom Software</a></li><li><a href="layanan.html" class="text-sm text-gray-500 hover:text-gray-950">Web Development</a></li></ul></div><div><h4 class="font-grotesk text-sm font-semibold mb-4">Produk</h4><ul class="flex flex-col gap-2 list-none"><li><a href="produk-detail.html?id=reka-cms" class="text-sm text-gray-500 hover:text-gray-950">REKA CMS</a></li><li><a href="produk-detail.html?id=reka-analytics" class="text-sm text-gray-500 hover:text-gray-950">REKA Analytics</a></li><li><a href="produk-detail.html?id=reka-hr" class="text-sm text-gray-500 hover:text-gray-950">REKA HRM</a></li></ul></div><div><h4 class="font-grotesk text-sm font-semibold mb-4">Kontak</h4><ul class="flex flex-col gap-2 list-none"><li><a href="kontak.html" class="text-sm text-gray-500 hover:text-gray-950">Mulai Proyek</a></li><li><a href="mailto:hello@solusidigital.jasanya.id" class="text-sm text-gray-500 hover:text-gray-950">Email Kami</a></li></ul></div></div></div>
+<div class="border-t border-gray-200 px-5 py-3"><div class="max-w-7xl mx-auto flex items-center justify-between gap-2"><p class="text-xs text-gray-400">&copy; 2025 REKA &mdash; Bagian dari ekosistem Jasanya.id.</p><p class="text-xs text-gray-400">solusidigital.jasanya.id</p></div></div></footer>
+
+<script src="assets/reka.js"></script>
+<script>
+const produkData = {
+  'reka-cms':{ nama:'REKA CMS',cat:'Productivity',tagline:'Kelola konten website Anda dengan mudah',desc:'Content Management System yang simpel namun powerful. Cocok untuk tim non-teknis yang butuh kontrol penuh atas website mereka.',harga:'Rp499.000/bln',status:'Available',icon:'layout-dashboard',fitur:['Editor visual drag-and-drop','Multi-user & role management','SEO tools terintegrasi','Media library terorganisir','Version control konten','API headless'] },
+  'reka-analytics':{ nama:'REKA Analytics',cat:'Analytics',tagline:'Pahami bisnis Anda lewat data',desc:'Dashboard analitik bisnis yang menggabungkan data dari berbagai sumber dan menyajikannya dalam visualisasi yang mudah dipahami.',harga:'Rp799.000/bln',status:'Available',icon:'bar-chart-3',fitur:['Koneksi 20+ sumber data','Dashboard realtime','Laporan otomatis via email','Alert & notifikasi pintar','Ekspor ke Excel/PDF','Akses mobile'] },
+  'reka-hr':{ nama:'REKA HRM',cat:'HR & People',tagline:'Manajemen SDM yang lebih manusiawi',desc:'Sistem HR komprehensif untuk mengelola absensi, payroll, performance review, dan rekrutmen dalam satu platform terintegrasi.',harga:'Rp999.000/bln',status:'Available',icon:'users',fitur:['Absensi & cuti digital','Payroll otomatis','Performance review 360°','Modul rekrutmen','e-Contract & dokumen','Self-service karyawan'] },
+  'reka-pos':{ nama:'REKA POS',cat:'Retail & Commerce',tagline:'Point of Sale modern untuk bisnis Anda',desc:'Sistem kasir berbasis cloud yang bisa diakses dari mana saja.',harga:'Rp399.000/bln',status:'Coming Soon',icon:'shopping-cart',fitur:['Transaksi offline mode','Multi-cabang & multi-kasir','Laporan penjualan realtime','Manajemen stok otomatis','Integrasi payment gateway','Loyalty program'] },
+};
+const galleries = {
+  'reka-cms':['https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=70','https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=70','https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&q=70'],
+  'reka-analytics':['https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=70','https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=800&q=70','https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&q=70'],
+  'reka-hr':['https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=70','https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=70','https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=70'],
+  'reka-pos':['https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=70','https://images.unsplash.com/photo-1556742111-a301076d9d18?w=800&q=70','https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=70'],
+};
+const params = new URLSearchParams(window.location.search);
+const id = params.get('id') || 'reka-cms';
+const p = produkData[id] || produkData['reka-cms'];
+const imgs = galleries[id] || galleries['reka-cms'];
+document.title = p.nama + ' — REKA';
+document.getElementById('prod-cat').textContent = p.cat;
+document.getElementById('prod-name').textContent = p.nama;
+document.getElementById('prod-tagline').textContent = p.tagline;
+document.getElementById('about-title').textContent = 'Tentang ' + p.nama;
+document.getElementById('prod-desc').textContent = p.desc;
+document.getElementById('prod-price').textContent = p.harga;
+const badge = document.getElementById('prod-status-badge');
+badge.textContent = p.status;
+badge.className = 'inline-block text-[0.7rem] font-semibold px-2.5 py-1 rounded-full mb-5 ' + (p.status === 'Available' ? 'bg-gray-950 text-white' : 'bg-gray-100 text-gray-500 border border-gray-200');
+const iconEl = document.getElementById('prod-icon');
+iconEl.innerHTML = '<i data-lucide="' + p.icon + '" class="w-6 h-6"></i>';
+const featList = document.getElementById('feat-list');
+p.fitur.forEach(f => {
+  const d = document.createElement('div');
+  d.className = 'flex items-center gap-3 p-4 rounded-xl bg-gray-100 border border-gray-200';
+  d.innerHTML = '<svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="text-sm text-gray-600">' + f + '</span>';
+  featList.appendChild(d);
+});
+// Gallery
+const mainImg = document.getElementById('gallery-main-img');
+mainImg.src = imgs[0];
+const thumbsEl = document.getElementById('gallery-thumbs');
+const dotsEl = document.getElementById('gallery-dots');
+let current = 0;
+imgs.forEach((src, i) => {
+  const thumb = document.createElement('div');
+  thumb.className = 'gallery-thumb flex-1 rounded-xl overflow-hidden border-2 border-gray-200 cursor-pointer transition-colors' + (i === 0 ? ' active' : '');
+  thumb.style.height = '72px';
+  thumb.innerHTML = '<img src="' + src + '" class="w-full h-full object-cover" />';
+  thumb.addEventListener('click', () => goTo(i)); thumbsEl.appendChild(thumb);
+  const dot = document.createElement('button');
+  dot.className = 'gallery-dot w-2 h-2 rounded-full bg-gray-400 border-none cursor-pointer' + (i === 0 ? ' active' : '');
+  dot.addEventListener('click', () => goTo(i)); dotsEl.appendChild(dot);
+});
+function goTo(idx) {
+  current = (idx + imgs.length) % imgs.length;
+  mainImg.src = imgs[current];
+  document.querySelectorAll('.gallery-thumb').forEach((t,i) => t.classList.toggle('active', i===current));
+  document.querySelectorAll('.gallery-dot').forEach((d,i) => d.classList.toggle('active', i===current));
+}
+document.querySelector('.gallery-btn.prev').addEventListener('click', () => goTo(current-1));
+document.querySelector('.gallery-btn.next').addEventListener('click', () => goTo(current+1));
+if(typeof lucide !== 'undefined') lucide.createIcons();
+</script>
+</body></html>

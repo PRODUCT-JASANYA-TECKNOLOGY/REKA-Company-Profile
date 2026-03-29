@@ -14,7 +14,7 @@
 
   if (hamburger && mobileMenu) {
     hamburger.addEventListener('click', () => {
-      mobileMenu.classList.toggle('open');
+      mobileMenu.classList.toggle('hidden');
     });
   }
 

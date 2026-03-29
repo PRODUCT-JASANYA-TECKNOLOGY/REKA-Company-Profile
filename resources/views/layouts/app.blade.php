@@ -7,6 +7,8 @@
     <meta name="description" content="@yield('description', 'Mulai dari website, aplikasi, hingga sistem kompleks — REKA membantu bisnis Anda tumbuh dengan solusi digital yang scalable dan terpercaya.')">
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    {{-- Favicon --}}
+    <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}">
     {{-- Lucide Icons --}}
     <script src="https://unpkg.com/lucide@latest" defer></script>
     @stack('styles')

@@ -1,7 +1,7 @@
 <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-transparent transition-[border-color,box-shadow] duration-300">
     <div class="max-w-7xl mx-auto px-5 lg:px-8 h-16 flex items-center justify-between">
         <a href="{{ route('home') }}">
-            <img src="https://customer-assets.emergentagent.com/job_reka-build/artifacts/sh4af1yg_Logo%20REKA%20%281%29.png" alt="REKA" class="h-12 w-auto object-contain block" />
+            <img src="{{ asset('images/logo.png') }}" alt="REKA" class="h-12 w-auto object-contain block" />
         </a>
         <ul class="hidden lg:flex items-center gap-6 list-none">
             <li><a href="{{ route('home') }}"      class="nav-link-item text-sm font-medium hover:text-gray-950 transition-colors {{ request()->routeIs('home') ? 'text-gray-950 font-semibold' : 'text-gray-500' }}">Beranda</a></li>

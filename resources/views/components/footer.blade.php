@@ -2,7 +2,7 @@
   <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10">
       <div class="lg:col-span-2">
-        <a href="{{ route('home') }}"><img src="https://customer-assets.emergentagent.com/job_reka-build/artifacts/sh4af1yg_Logo%20REKA%20%281%29.png" alt="REKA" class="h-10 mb-4" /></a>
+        <a href="{{ route('home') }}"><img src="{{ asset('images/logo.png') }}" alt="REKA" class="h-10 mb-4" /></a>
         <p class="text-sm leading-relaxed text-gray-500 max-w-xs mb-5">REKA adalah unit solusi digital dari Jasanya.id yang berfokus pada pengembangan software dan sistem bisnis yang scalable &amp; reliable.</p>
         <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium bg-gray-100 text-gray-500 border border-gray-200 mb-4">Bagian dari <a href="https://jasanya.id" target="_blank" class="font-semibold text-gray-950 flex items-center gap-1">Jasanya.id <i data-lucide="external-link" class="w-2.5 h-2.5"></i></a></div>
         <div class="flex flex-col gap-2 mb-4">

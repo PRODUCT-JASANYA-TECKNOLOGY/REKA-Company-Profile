@@ -28,7 +28,7 @@
                 class="sticky-note pcard relative rounded-[1.4rem] border border-gray-200 bg-gray-100 p-7 shadow-note transition-all duration-300"
                 style="transform:rotate(-2deg)">
                 <span class="absolute -top-2 left-5 z-20 flex h-3 w-3">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gray-300 opacity-70"></span>
+                    <span class="absolute inline-flex h-full w-full rounded-full bg-gray-400 opacity-80" style="animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;"></span>
                     <span class="relative inline-flex h-3 w-3 rounded-full bg-gray-900 ring-2 ring-white"></span>
                 </span>
                 <div
@@ -43,7 +43,7 @@
                 class="sticky-note pcard relative rounded-[1.4rem] border border-gray-200 bg-gray-100 p-7 shadow-note transition-all duration-300"
                 style="transform:rotate(1.6deg)">
                 <span class="absolute -top-2 left-5 z-20 flex h-3 w-3">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gray-300 opacity-70"></span>
+                    <span class="absolute inline-flex h-full w-full rounded-full bg-gray-400 opacity-80" style="animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;"></span>
                     <span class="relative inline-flex h-3 w-3 rounded-full bg-gray-900 ring-2 ring-white"></span>
                 </span>
                 <div
@@ -58,7 +58,7 @@
                 class="sticky-note pcard relative rounded-[1.4rem] border border-gray-200 bg-gray-100 p-7 shadow-note transition-all duration-300"
                 style="transform:rotate(-1.4deg)">
                 <span class="absolute -top-2 left-5 z-20 flex h-3 w-3">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gray-300 opacity-70"></span>
+                    <span class="absolute inline-flex h-full w-full rounded-full bg-gray-400 opacity-80" style="animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;"></span>
                     <span class="relative inline-flex h-3 w-3 rounded-full bg-gray-900 ring-2 ring-white"></span>
                 </span>
                 <div
@@ -73,7 +73,7 @@
                 class="sticky-note pcard relative rounded-[1.4rem] border border-gray-200 bg-gray-100 p-7 shadow-note transition-all duration-300"
                 style="transform:rotate(2deg)">
                 <span class="absolute -top-2 left-5 z-20 flex h-3 w-3">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gray-300 opacity-70"></span>
+                    <span class="absolute inline-flex h-full w-full rounded-full bg-gray-400 opacity-80" style="animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;"></span>
                     <span class="relative inline-flex h-3 w-3 rounded-full bg-gray-900 ring-2 ring-white"></span>
                 </span>
                 <div

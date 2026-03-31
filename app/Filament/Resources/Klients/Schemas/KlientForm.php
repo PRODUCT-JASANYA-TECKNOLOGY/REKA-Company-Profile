@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Klients\Schemas;
 
+use App\Models\Category;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
@@ -17,7 +18,7 @@ class KlientForm
             ->components([
                 Select::make('category_id')
                     ->label('Category')
-                    ->relationship('category', 'nama')
+                    ->options(Category::query()->where('type', 'klient')->pluck('nama', 'id'))
                     ->searchable()
                     ->preload()
                     ->required(),

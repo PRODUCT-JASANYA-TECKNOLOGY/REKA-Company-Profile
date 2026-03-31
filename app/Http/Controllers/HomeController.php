@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Faq;
 
 class HomeController extends Controller
 {
@@ -11,8 +11,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // TODO: Wiring data jika diperlukan
-        
-        return view('pages.home');
+        $faqs = Faq::query()
+            ->where('active', true)
+            ->orderBy('id')
+            ->get();
+
+        return view('pages.home', compact('faqs'));
     }
 }

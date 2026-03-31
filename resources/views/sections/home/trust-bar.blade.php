@@ -9,21 +9,25 @@
       <div class="absolute right-0 top-0 bottom-0 w-16 z-10 pointer-events-none" style="background:linear-gradient(to left,#fff,transparent)"></div>
       <div class="flex">
         <div class="anim-marquee flex gap-5">
-          <div class="flex-shrink-0 flex items-center gap-2.5 px-4 py-2.5 rounded-xl border border-gray-200 bg-gray-100 min-w-[130px]"><div class="w-7 h-7 rounded-lg bg-gray-950 flex items-center justify-center flex-shrink-0"><span class="text-white font-bold font-grotesk" style="font-size:8px">TN</span></div><span class="text-sm font-medium text-gray-600 font-grotesk">TechNova</span></div>
-          <div class="flex-shrink-0 flex items-center gap-2.5 px-4 py-2.5 rounded-xl border border-gray-200 bg-gray-100 min-w-[130px]"><div class="w-7 h-7 rounded-lg bg-gray-950 flex items-center justify-center flex-shrink-0"><span class="text-white font-bold font-grotesk" style="font-size:8px">GG</span></div><span class="text-sm font-medium text-gray-600 font-grotesk">Griya Group</span></div>
-          <div class="flex-shrink-0 flex items-center gap-2.5 px-4 py-2.5 rounded-xl border border-gray-200 bg-gray-100 min-w-[130px]"><div class="w-7 h-7 rounded-lg bg-gray-950 flex items-center justify-center flex-shrink-0"><span class="text-white font-bold font-grotesk" style="font-size:8px">HL</span></div><span class="text-sm font-medium text-gray-600 font-grotesk">HealthLink</span></div>
-          <div class="flex-shrink-0 flex items-center gap-2.5 px-4 py-2.5 rounded-xl border border-gray-200 bg-gray-100 min-w-[130px]"><div class="w-7 h-7 rounded-lg bg-gray-950 flex items-center justify-center flex-shrink-0"><span class="text-white font-bold font-grotesk" style="font-size:8px">DF</span></div><span class="text-sm font-medium text-gray-600 font-grotesk">DataFlow</span></div>
-          <div class="flex-shrink-0 flex items-center gap-2.5 px-4 py-2.5 rounded-xl border border-gray-200 bg-gray-100 min-w-[130px]"><div class="w-7 h-7 rounded-lg bg-gray-950 flex items-center justify-center flex-shrink-0"><span class="text-white font-bold font-grotesk" style="font-size:8px">ET</span></div><span class="text-sm font-medium text-gray-600 font-grotesk">EduTrack</span></div>
-          <div class="flex-shrink-0 flex items-center gap-2.5 px-4 py-2.5 rounded-xl border border-gray-200 bg-gray-100 min-w-[130px]"><div class="w-7 h-7 rounded-lg bg-gray-950 flex items-center justify-center flex-shrink-0"><span class="text-white font-bold font-grotesk" style="font-size:8px">LS</span></div><span class="text-sm font-medium text-gray-600 font-grotesk">LogiStar</span></div>
-          <div class="flex-shrink-0 flex items-center gap-2.5 px-4 py-2.5 rounded-xl border border-gray-200 bg-gray-100 min-w-[130px]"><div class="w-7 h-7 rounded-lg bg-gray-950 flex items-center justify-center flex-shrink-0"><span class="text-white font-bold font-grotesk" style="font-size:8px">FP</span></div><span class="text-sm font-medium text-gray-600 font-grotesk">FinancePro</span></div>
-          <div class="flex-shrink-0 flex items-center gap-2.5 px-4 py-2.5 rounded-xl border border-gray-200 bg-gray-100 min-w-[130px]"><div class="w-7 h-7 rounded-lg bg-gray-950 flex items-center justify-center flex-shrink-0"><span class="text-white font-bold font-grotesk" style="font-size:8px">RN</span></div><span class="text-sm font-medium text-gray-600 font-grotesk">RetailNow</span></div>
-          <!-- duplicate -->
-          <div class="flex-shrink-0 flex items-center gap-2.5 px-4 py-2.5 rounded-xl border border-gray-200 bg-gray-100 min-w-[130px]"><div class="w-7 h-7 rounded-lg bg-gray-950 flex items-center justify-center flex-shrink-0"><span class="text-white font-bold font-grotesk" style="font-size:8px">TN</span></div><span class="text-sm font-medium text-gray-600 font-grotesk">TechNova</span></div>
-          <div class="flex-shrink-0 flex items-center gap-2.5 px-4 py-2.5 rounded-xl border border-gray-200 bg-gray-100 min-w-[130px]"><div class="w-7 h-7 rounded-lg bg-gray-950 flex items-center justify-center flex-shrink-0"><span class="text-white font-bold font-grotesk" style="font-size:8px">GG</span></div><span class="text-sm font-medium text-gray-600 font-grotesk">Griya Group</span></div>
-          <div class="flex-shrink-0 flex items-center gap-2.5 px-4 py-2.5 rounded-xl border border-gray-200 bg-gray-100 min-w-[130px]"><div class="w-7 h-7 rounded-lg bg-gray-950 flex items-center justify-center flex-shrink-0"><span class="text-white font-bold font-grotesk" style="font-size:8px">HL</span></div><span class="text-sm font-medium text-gray-600 font-grotesk">HealthLink</span></div>
-          <div class="flex-shrink-0 flex items-center gap-2.5 px-4 py-2.5 rounded-xl border border-gray-200 bg-gray-100 min-w-[130px]"><div class="w-7 h-7 rounded-lg bg-gray-950 flex items-center justify-center flex-shrink-0"><span class="text-white font-bold font-grotesk" style="font-size:8px">DF</span></div><span class="text-sm font-medium text-gray-600 font-grotesk">DataFlow</span></div>
-          <div class="flex-shrink-0 flex items-center gap-2.5 px-4 py-2.5 rounded-xl border border-gray-200 bg-gray-100 min-w-[130px]"><div class="w-7 h-7 rounded-lg bg-gray-950 flex items-center justify-center flex-shrink-0"><span class="text-white font-bold font-grotesk" style="font-size:8px">FP</span></div><span class="text-sm font-medium text-gray-600 font-grotesk">FinancePro</span></div>
-          <div class="flex-shrink-0 flex items-center gap-2.5 px-4 py-2.5 rounded-xl border border-gray-200 bg-gray-100 min-w-[130px]"><div class="w-7 h-7 rounded-lg bg-gray-950 flex items-center justify-center flex-shrink-0"><span class="text-white font-bold font-grotesk" style="font-size:8px">RN</span></div><span class="text-sm font-medium text-gray-600 font-grotesk">RetailNow</span></div>
+          @forelse ($marqueeKlients ?? [] as $klient)
+            <div class="flex-shrink-0 flex items-center gap-2.5 px-4 py-2.5 rounded-xl border border-gray-200 bg-gray-100 min-w-[130px]">
+              @if ($klient->has_logo)
+                <img src="{{ $klient->logo_url }}" alt="{{ $klient->nama }}" class="w-7 h-7 rounded-lg object-cover flex-shrink-0" loading="lazy">
+              @else
+                <div class="w-7 h-7 rounded-lg bg-gray-950 flex items-center justify-center flex-shrink-0">
+                  <span class="text-white font-bold font-grotesk" style="font-size:8px">{{ $klient->initial ?: 'KL' }}</span>
+                </div>
+              @endif
+              <span class="text-sm font-medium text-gray-600 font-grotesk">{{ $klient->nama }}</span>
+            </div>
+          @empty
+            <div class="flex-shrink-0 flex items-center gap-2.5 px-4 py-2.5 rounded-xl border border-gray-200 bg-gray-100 min-w-[130px]">
+              <div class="w-7 h-7 rounded-lg bg-gray-950 flex items-center justify-center flex-shrink-0">
+                <span class="text-white font-bold font-grotesk" style="font-size:8px">KL</span>
+              </div>
+              <span class="text-sm font-medium text-gray-600 font-grotesk">Klient</span>
+            </div>
+          @endforelse
         </div>
       </div>
     </div>

@@ -28,6 +28,7 @@ class KlientForm
                 FileUpload::make('logo')
                     ->label('Logo')
                     ->image()
+                    ->disk('public')
                     ->required()
                     ->directory('klient/logo'),
                 Textarea::make('deskripsi')

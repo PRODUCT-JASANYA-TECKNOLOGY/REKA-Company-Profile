@@ -20,6 +20,7 @@ class ToolsForm
                 FileUpload::make('logo')
                     ->label('Logo')
                     ->image()
+                    ->disk('public')
                     ->required()
                     ->directory('tools/logo'),
                 Textarea::make('deskripsi')

@@ -22,6 +22,7 @@ class PlatformForm
                 FileUpload::make('logo')
                     ->label('Logo')
                     ->image()
+                    ->disk('public')
                     ->required()
                     ->directory('platform/logo'),
                 TextInput::make('no_whatsapp')

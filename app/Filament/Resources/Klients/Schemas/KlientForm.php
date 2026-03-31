@@ -2,9 +2,11 @@
 
 namespace App\Filament\Resources\Klients\Schemas;
 
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Schema;
 
 class KlientForm
@@ -14,19 +16,26 @@ class KlientForm
         return $schema
             ->components([
                 Select::make('category_id')
-                    ->relationship('category', 'nama')->searchable()->preload()
+                    ->label('Category')
+                    ->relationship('category', 'nama')
+                    ->searchable()
+                    ->preload()
                     ->required(),
                 TextInput::make('nama')
                     ->required()
                     ->maxLength(128),
-                TextInput::make('logo')
+                FileUpload::make('logo')
+                    ->label('Logo')
+                    ->image()
                     ->required()
-                    ->maxLength(255),
+                    ->directory('klient/logo'),
                 Textarea::make('deskripsi')
                     ->columnSpanFull(),
-                TextInput::make('status_id')
+                Toggle::make('active')
+                    ->label('Active')
+                    ->default(true)
                     ->required()
-                    ->numeric(),
+                    ->inline(false),
             ]);
     }
 }

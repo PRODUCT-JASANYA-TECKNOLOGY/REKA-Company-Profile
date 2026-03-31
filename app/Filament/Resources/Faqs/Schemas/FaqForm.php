@@ -4,6 +4,7 @@ namespace App\Filament\Resources\Faqs\Schemas;
 
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Schema;
 
 class FaqForm
@@ -18,9 +19,11 @@ class FaqForm
                 Textarea::make('jawaban')
                     ->required()
                     ->columnSpanFull(),
-                TextInput::make('status_id')
+                Toggle::make('active')
+                    ->label('Active')
+                    ->default(true)
                     ->required()
-                    ->numeric(),
+                    ->inline(false),
             ]);
     }
 }

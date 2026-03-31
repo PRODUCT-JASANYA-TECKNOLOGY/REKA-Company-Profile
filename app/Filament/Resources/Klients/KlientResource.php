@@ -11,7 +11,6 @@ use App\Models\Klient;
 use BackedEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
-use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -20,7 +19,7 @@ class KlientResource extends Resource
 {
     protected static ?string $model = Klient::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-users';
     protected static string|\UnitEnum|null $navigationGroup = 'Master Data';
     protected static ?string $navigationLabel = 'Klient';
     protected static ?string $modelLabel = 'Klient';

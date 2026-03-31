@@ -4,6 +4,7 @@ namespace App\Filament\Resources\Categories\Schemas;
 
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Schema;
 
 class CategoryForm
@@ -20,9 +21,11 @@ class CategoryForm
                     ->maxLength(128),
                 Textarea::make('deskripsi')
                     ->columnSpanFull(),
-                TextInput::make('status_id')
+                Toggle::make('active')
+                    ->label('Active')
+                    ->default(true)
                     ->required()
-                    ->numeric(),
+                    ->inline(false),
             ]);
     }
 }

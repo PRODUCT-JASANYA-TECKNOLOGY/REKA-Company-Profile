@@ -7,6 +7,7 @@ use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Actions\ForceDeleteBulkAction;
 use Filament\Actions\RestoreBulkAction;
+use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\TrashedFilter;
 use Filament\Tables\Table;
@@ -21,8 +22,8 @@ class CategoriesTable
                     ->searchable(),
                 TextColumn::make('type')
                     ->searchable(),
-                TextColumn::make('status_id')
-                    ->numeric()
+                IconColumn::make('active')
+                    ->boolean()
                     ->sortable(),
                 TextColumn::make('createdBy.name')
                     ->label('Created By & When')

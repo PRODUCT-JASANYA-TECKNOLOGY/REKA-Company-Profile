@@ -11,7 +11,6 @@ use App\Models\Faq;
 use BackedEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
-use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -20,7 +19,7 @@ class FaqResource extends Resource
 {
     protected static ?string $model = Faq::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-question-mark-circle';
     protected static string|\UnitEnum|null $navigationGroup = 'Master Data';
     protected static ?string $navigationLabel = 'FAQ';
     protected static ?string $modelLabel = 'FAQ';

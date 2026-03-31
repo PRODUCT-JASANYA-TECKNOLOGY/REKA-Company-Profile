@@ -2,8 +2,10 @@
 
 namespace App\Filament\Resources\Tools\Schemas;
 
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Schema;
 
 class ToolsForm
@@ -15,14 +17,18 @@ class ToolsForm
                 TextInput::make('nama')
                     ->required()
                     ->maxLength(128),
-                TextInput::make('logo')
+                FileUpload::make('logo')
+                    ->label('Logo')
+                    ->image()
                     ->required()
-                    ->maxLength(128),
+                    ->directory('tools/logo'),
                 Textarea::make('deskripsi')
                     ->columnSpanFull(),
-                TextInput::make('status_id')
+                Toggle::make('active')
+                    ->label('Active')
+                    ->default(true)
                     ->required()
-                    ->numeric(),
+                    ->inline(false),
             ]);
     }
 }

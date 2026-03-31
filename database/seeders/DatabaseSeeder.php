@@ -26,6 +26,7 @@ class DatabaseSeeder extends Seeder
             CategorySeeder::class,
             FaqSeeder::class,
             KlientSeeder::class,
+            ToolsSeeder::class,
         ]);
     }
 }

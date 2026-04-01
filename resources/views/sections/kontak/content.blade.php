@@ -39,17 +39,78 @@
         </div>
         <div class="bg-gray-100 border border-gray-200 rounded-xl p-8" id="contact-form-wrap">
           <h3 class="font-grotesk text-xl font-bold mb-6">Formulir Konsultasi</h3>
-          <form id="contact-form">
+          <form id="contact-form" action="{{ route('kontak.store') }}" method="POST">
+            @csrf
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-              <div><label class="block text-xs font-medium text-gray-500 mb-1.5">Nama Lengkap *</label><input name="nama" placeholder="Budi Santoso" class="w-full px-4 py-3 rounded-xl text-sm outline-none bg-white border border-gray-200 text-gray-950 focus:border-gray-500 transition-colors" /></div>
-              <div><label class="block text-xs font-medium text-gray-500 mb-1.5">Email *</label><input name="email" type="email" placeholder="budi@perusahaan.com" class="w-full px-4 py-3 rounded-xl text-sm outline-none bg-white border border-gray-200 text-gray-950 focus:border-gray-500 transition-colors" /></div>
+              <div><label class="block text-xs font-medium text-gray-500 mb-1.5">Nama Lengkap *</label><input name="nama" placeholder="Budi Santoso" class="w-full px-4 py-3 rounded-xl text-sm outline-none bg-white border border-gray-200 text-gray-950 focus:border-gray-500 transition-colors" required /></div>
+              <div><label class="block text-xs font-medium text-gray-500 mb-1.5">Email *</label><input name="email" type="email" placeholder="budi@perusahaan.com" class="w-full px-4 py-3 rounded-xl text-sm outline-none bg-white border border-gray-200 text-gray-950 focus:border-gray-500 transition-colors" required /></div>
             </div>
             <div class="mb-4"><label class="block text-xs font-medium text-gray-500 mb-1.5">Nomor WhatsApp</label><input name="whatsapp" placeholder="+62 812-xxxx-xxxx" class="w-full px-4 py-3 rounded-xl text-sm outline-none bg-white border border-gray-200 text-gray-950 focus:border-gray-500 transition-colors" /></div>
             <div class="mb-6"><label class="block text-xs font-medium text-gray-500 mb-1.5">Ceritakan Kebutuhan Proyek Anda</label><textarea name="kebutuhan" rows="5" placeholder="Saya ingin membangun aplikasi untuk..." class="w-full px-4 py-3 rounded-xl text-sm outline-none resize-none bg-white border border-gray-200 text-gray-950 focus:border-gray-500 transition-colors"></textarea></div>
-            <button type="submit" class="w-full py-3.5 rounded-xl font-grotesk font-semibold text-sm flex items-center justify-center gap-2 bg-gray-950 text-white hover:bg-gray-800 transition-colors">Kirim Konsultasi <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></button>
+            <button type="submit" id="submit-btn" class="w-full py-3.5 rounded-xl font-grotesk font-semibold text-sm flex items-center justify-center gap-2 bg-gray-950 text-white hover:bg-gray-800 transition-colors">
+              <span>Kirim Konsultasi</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </button>
           </form>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+@push('scripts')
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('contact-form');
+  const formWrap = document.getElementById('contact-form-wrap');
+  const successBox = document.getElementById('form-success');
+  const resetBtn = document.getElementById('form-reset');
+  const submitBtn = document.getElementById('submit-btn');
+
+  if (form) {
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      
+      // Basic UI feedback
+      submitBtn.disabled = true;
+      submitBtn.querySelector('span').innerText = 'Mengirim...';
+
+      const formData = new FormData(form);
+      
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'X-Requested-With': 'XMLHttpRequest'
+          }
+        });
+
+        const result = await response.json();
+
+        if (response.ok && result.success) {
+          formWrap.style.display = 'none';
+          successBox.style.display = 'flex';
+          form.reset();
+        } else {
+          alert('Terjadi kesalahan. Silakan coba lagi.');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Gagal mengirim pesan. Periksa koneksi internet Anda.');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.querySelector('span').innerText = 'Kirim Konsultasi';
+      }
+    });
+  }
+
+  if (resetBtn) {
+    resetBtn.addEventListener('click', function () {
+      successBox.style.display = 'none';
+      formWrap.style.display = 'block';
+    });
+  }
+});
+</script>
+@endpush

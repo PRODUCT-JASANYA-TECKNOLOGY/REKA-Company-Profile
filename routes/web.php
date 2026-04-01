@@ -13,6 +13,7 @@ Route::get('/layanan', [LayananController::class, 'index'])->name('layanan');
 Route::get('/proses', [ProsesController::class, 'index'])->name('proses');
 Route::get('/portofolio', [PortofolioController::class, 'index'])->name('portofolio');
 Route::get('/kontak', [KontakController::class, 'index'])->name('kontak');
+Route::post('/kontak', [KontakController::class, 'store'])->name('kontak.store');
 
 Route::prefix('produk')->name('produk.')->group(function () {
     Route::get('/', [ProdukController::class, 'index'])->name('index');

@@ -18,8 +18,24 @@ class HomeController extends Controller
             ->get();
 
         $klients = Klient::query()
+            ->with(['category'])
             ->where('active', true)
+            ->whereNotNull('logo')
+            ->where('logo', '!=', '')
             ->orderBy('id')
+            ->take(8)
+            ->get();
+
+        $industries = \App\Models\Category::query()
+            ->where('active', true)
+            ->where('type', 'Industry')
+            ->orderBy('nama')
+            ->get();
+
+        $technologies = \App\Models\Category::query()
+            ->where('active', true)
+            ->where('type', 'Technology')
+            ->orderBy('nama')
             ->get();
 
         $marqueeKlients = $klients->map(function ($klient) {
@@ -46,6 +62,6 @@ class HomeController extends Controller
             $marqueeKlients = $marqueeKlients->concat($marqueeKlients);
         }
 
-        return view('pages.home', compact('faqs', 'klients', 'marqueeKlients'));
+        return view('pages.home', compact('faqs', 'klients', 'marqueeKlients', 'industries', 'technologies'));
     }
 }

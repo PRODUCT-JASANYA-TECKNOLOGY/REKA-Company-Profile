@@ -10,6 +10,7 @@
     @include('sections.home.kenapa-reka')
     @include('sections.home.proses-preview')
     @include('sections.home.testimoni')
+    @include('sections.home.klient')
     @include('sections.home.faq')
     @include('sections.home.cta')
 @endsection

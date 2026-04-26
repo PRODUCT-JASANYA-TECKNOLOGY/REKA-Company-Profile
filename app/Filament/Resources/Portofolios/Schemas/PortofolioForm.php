@@ -3,9 +3,11 @@
 namespace App\Filament\Resources\Portofolios\Schemas;
 
 use Filament\Forms\Components\DatePicker;
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Schema;
 
 class PortofolioForm
@@ -15,27 +17,46 @@ class PortofolioForm
         return $schema
             ->components([
                 Select::make('klient_id')
-                    ->relationship('klient', 'nama')->searchable()->preload()
+                    ->label('Klient')
+                    ->relationship('klient', 'nama')
+                    ->searchable()
+                    ->preload()
                     ->required(),
                 Select::make('category_id')
-                    ->relationship('category', 'nama')->searchable()->preload()
-                    ->required(),
-                TextInput::make('slug')
+                    ->label('Category')
+                    ->relationship('category', 'nama')
+                    ->searchable()
+                    ->preload()
                     ->required(),
                 TextInput::make('nama')
-                    ->required(),
+                    ->required()
+                    ->maxLength(255),
+                TextInput::make('slug')
+                    ->required()
+                    ->maxLength(255),
                 Textarea::make('deskripsi')
                     ->required()
                     ->columnSpanFull(),
-                TextInput::make('thumbnail')
+                FileUpload::make('thumbnail')
+                    ->label('Thumbnail')
+                    ->image()
+                    ->disk('public')
+                    ->directory('portofolio/thumbnail')
                     ->required(),
-                Textarea::make('foto')
+                FileUpload::make('foto')
+                    ->label('Foto Tambahan')
+                    ->image()
+                    ->disk('public')
+                    ->directory('portofolio/foto')
+                    ->multiple()
                     ->columnSpanFull(),
                 DatePicker::make('tanggal_proyek')
                     ->required(),
-                TextInput::make('status_id')
+                Toggle::make('active')
+                    ->label('Active')
+                    ->default(true)
                     ->required()
-                    ->numeric(),
+                    ->inline(false),
             ]);
     }
 }

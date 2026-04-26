@@ -7,6 +7,8 @@ use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Actions\ForceDeleteBulkAction;
 use Filament\Actions\RestoreBulkAction;
+use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\TrashedFilter;
 use Filament\Tables\Table;
@@ -25,13 +27,15 @@ class PortofoliosTable
                     ->searchable(),
                 TextColumn::make('nama')
                     ->searchable(),
-                TextColumn::make('thumbnail')
-                    ->searchable(),
+                ImageColumn::make('thumbnail')
+                    ->disk('public')
+                    ->width(60)
+                    ->height(40),
                 TextColumn::make('tanggal_proyek')
                     ->date()
                     ->sortable(),
-                TextColumn::make('status_id')
-                    ->numeric()
+                IconColumn::make('active')
+                    ->boolean()
                     ->sortable(),
                 TextColumn::make('createdBy.name')
                     ->label('Created By & When')

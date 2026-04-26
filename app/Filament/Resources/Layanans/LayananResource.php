@@ -20,7 +20,12 @@ class LayananResource extends Resource
 {
     protected static ?string $model = Layanan::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedBriefcase;
+    protected static string|\UnitEnum|null $navigationGroup = 'Konten';
+    protected static ?string $navigationLabel = 'Layanan';
+    protected static ?string $modelLabel = 'Layanan';
+    protected static ?string $pluralModelLabel = 'Layanan';
+    protected static ?string $recordTitleAttribute = 'nama';
 
     public static function form(Schema $schema): Schema
     {

@@ -20,7 +20,12 @@ class TestimoniResource extends Resource
 {
     protected static ?string $model = Testimoni::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedChatBubbleLeftRight;
+    protected static string|\UnitEnum|null $navigationGroup = 'Konten';
+    protected static ?string $navigationLabel = 'Testimoni';
+    protected static ?string $modelLabel = 'Testimoni';
+    protected static ?string $pluralModelLabel = 'Testimoni';
+    protected static ?string $recordTitleAttribute = 'nama';
 
     public static function form(Schema $schema): Schema
     {

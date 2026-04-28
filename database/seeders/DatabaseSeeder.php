@@ -28,6 +28,7 @@ class DatabaseSeeder extends Seeder
             KlientSeeder::class,
             ToolsSeeder::class,
             TestimoniSeeder::class,
+            LayananSeeder::class,
         ]);
     }
 }

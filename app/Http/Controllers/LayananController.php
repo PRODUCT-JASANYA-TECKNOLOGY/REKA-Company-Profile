@@ -11,7 +11,11 @@ class LayananController extends Controller
      */
     public function index()
     {
-        // TODO: Data layanan dinamis bisa dikirim dari sini
-        return view('pages.layanan');
+        $layanans = \App\Models\Layanan::query()
+            ->where('active', true)
+            ->orderBy('id')
+            ->get();
+
+        return view('pages.layanan', compact('layanans'));
     }
 }

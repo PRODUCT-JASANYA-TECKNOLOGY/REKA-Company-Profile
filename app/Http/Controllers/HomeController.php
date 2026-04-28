@@ -17,6 +17,12 @@ class HomeController extends Controller
             ->orderBy('id')
             ->get();
 
+        $layanans = \App\Models\Layanan::query()
+            ->where('active', true)
+            ->orderBy('id')
+            ->take(6)
+            ->get();
+
         $klients = Klient::query()
             ->with(['category'])
             ->where('active', true)
@@ -62,6 +68,6 @@ class HomeController extends Controller
             $marqueeKlients = $marqueeKlients->concat($marqueeKlients);
         }
 
-        return view('pages.home', compact('faqs', 'klients', 'marqueeKlients', 'industries', 'technologies'));
+        return view('pages.home', compact('faqs', 'layanans', 'klients', 'marqueeKlients', 'industries', 'technologies'));
     }
 }

@@ -29,6 +29,7 @@ class DatabaseSeeder extends Seeder
             ToolsSeeder::class,
             TestimoniSeeder::class,
             LayananSeeder::class,
+            PortofolioSeeder::class,
         ]);
     }
 }

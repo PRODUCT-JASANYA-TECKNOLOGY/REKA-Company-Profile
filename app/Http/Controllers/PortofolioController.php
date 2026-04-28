@@ -11,6 +11,12 @@ class PortofolioController extends Controller
      */
     public function index()
     {
-        return view('pages.portofolio');
+        $portofolios = \App\Models\Portofolio::query()
+            ->with(['klient', 'category', 'tools'])
+            ->where('active', true)
+            ->orderByDesc('tanggal_proyek')
+            ->get();
+
+        return view('pages.portofolio', compact('portofolios'));
     }
 }

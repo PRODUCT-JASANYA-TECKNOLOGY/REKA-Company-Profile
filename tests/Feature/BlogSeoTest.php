@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use Database\Seeders\BlogSeeder;
+use Database\Seeders\CategorySeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
@@ -14,6 +15,7 @@ class BlogSeoTest extends TestCase
     {
         parent::setUp();
 
+        $this->seed(CategorySeeder::class);
         $this->seed(BlogSeeder::class);
     }
 

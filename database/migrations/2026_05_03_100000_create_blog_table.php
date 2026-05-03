@@ -13,14 +13,12 @@ return new class extends Migration
     {
         Schema::create('blog', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('category_id')->constrained('category');
             $table->string('slug', 255)->unique();
-            $table->string('judul', 255);
-            $table->string('kategori', 128);
-            $table->string('waktu_baca', 32);
-            $table->string('thumbnail', 255);
+            $table->string('title', 255);
             $table->text('excerpt');
-            $table->longText('isi');
-            $table->date('published_at');
+            $table->longText('content');
+            $table->text('image')->nullable();
 
             $this->base($table);
         });

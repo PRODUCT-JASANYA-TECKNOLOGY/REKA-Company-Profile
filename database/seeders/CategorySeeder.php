@@ -109,6 +109,30 @@ class CategorySeeder extends Seeder
                 'deskripsi' => 'Portofolio website event dan pendaftaran peserta.',
                 'active' => true,
             ],
+            [
+                'nama' => 'Engineering',
+                'type' => 'blog',
+                'deskripsi' => 'Kategori artikel engineering dan software development.',
+                'active' => true,
+            ],
+            [
+                'nama' => 'Architecture',
+                'type' => 'blog',
+                'deskripsi' => 'Kategori artikel arsitektur sistem dan skalabilitas.',
+                'active' => true,
+            ],
+            [
+                'nama' => 'Business',
+                'type' => 'blog',
+                'deskripsi' => 'Kategori artikel bisnis, ROI, dan transformasi digital.',
+                'active' => true,
+            ],
+            [
+                'nama' => 'Security',
+                'type' => 'blog',
+                'deskripsi' => 'Kategori artikel keamanan aplikasi dan best practice.',
+                'active' => true,
+            ],
         ];
 
         foreach ($categories as $category) {

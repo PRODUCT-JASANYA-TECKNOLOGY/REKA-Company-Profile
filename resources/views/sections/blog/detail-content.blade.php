@@ -5,8 +5,6 @@
     <div class="lg:col-span-3">
       <div class="flex flex-wrap items-center gap-3 mb-5">
         <span class="text-[0.7rem] font-semibold px-2.5 py-1 rounded-full bg-gray-950 text-white">{{ $article['category_name'] }}</span>
-        <span class="text-xs text-gray-500 flex items-center gap-1"><i data-lucide="clock" class="w-3 h-3"></i> {{ $article['reading_time_label'] }}</span>
-        <span class="text-xs text-gray-500 flex items-center gap-1"><i data-lucide="calendar" class="w-3 h-3"></i> {{ $article['published_at_human'] }}</span>
       </div>
       <h1 class="font-grotesk text-3xl sm:text-4xl font-bold tracking-[-0.03em] mb-6 leading-snug">{{ $article['title'] }}</h1>
       <div class="border-l-4 border-gray-200 pl-5 mb-8">

@@ -42,7 +42,7 @@ class BlogController extends Controller
             'canonical' => $payload['article']['url'],
             'image' => $payload['article']['image_url'],
             'schema_image' => $payload['article']['image_url'],
-            'datePublished' => $payload['article']['published_at_iso'],
+            'datePublished' => $payload['article']['created_at_iso'],
             'dateModified' => $payload['article']['updated_at_iso'],
             'mainEntityOfPage' => $payload['article']['url'],
         ]);

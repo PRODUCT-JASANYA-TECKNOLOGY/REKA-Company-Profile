@@ -13,8 +13,8 @@ class BlogArticleRepository
     {
         return Blog::query()
             ->active()
-            ->published()
-            ->orderByDesc('published_at')
+            ->with('category')
+            ->orderByDesc('updated_at')
             ->orderByDesc('id')
             ->get()
             ->map(fn (Blog $blog): array => $this->map($blog))
@@ -28,7 +28,7 @@ class BlogArticleRepository
     {
         $blog = Blog::query()
             ->active()
-            ->published()
+            ->with('category')
             ->where('slug', $slug)
             ->first();
 
@@ -42,14 +42,14 @@ class BlogArticleRepository
     {
         return [
             'slug' => $blog->slug,
-            'title' => $blog->judul,
-            'category_name' => $blog->kategori,
-            'reading_time_label' => $blog->waktu_baca,
-            'published_at' => $blog->published_at?->toDateString(),
-            'updated_at' => $blog->updated_at?->toDateString() ?? $blog->published_at?->toDateString(),
-            'image_url' => $blog->thumbnail,
+            'title' => $blog->title,
+            'category_name' => $blog->category?->nama,
+            'created_at' => $blog->created_at?->toDateString(),
+            'updated_at' => $blog->updated_at?->toDateString() ?? $blog->created_at?->toDateString(),
+            'image_url' => is_array($blog->image) && $blog->image !== [] ? $blog->image[0] : null,
+            'images' => $blog->image ?? [],
             'excerpt' => $blog->excerpt,
-            'content_html' => $blog->isi,
+            'content_html' => $blog->content,
         ];
     }
 }

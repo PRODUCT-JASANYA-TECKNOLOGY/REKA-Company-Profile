@@ -30,4 +30,9 @@ class Category extends Model
     {
         return $this->hasMany(Portofolio::class, 'category_id');
     }
+
+    public function blogs(): HasMany
+    {
+        return $this->hasMany(Blog::class, 'category_id');
+    }
 }

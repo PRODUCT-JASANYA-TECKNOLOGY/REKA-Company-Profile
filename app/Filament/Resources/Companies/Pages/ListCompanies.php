@@ -19,6 +19,6 @@ class ListCompanies extends ListRecords
             'active' => true,
         ]);
 
-        $this->redirect(CompanyResource::getUrl('edit', ['record' => $record]));
+        $this->redirect(CompanyResource::getUrl('view', ['record' => $record]));
     }
 }

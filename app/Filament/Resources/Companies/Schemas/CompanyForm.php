@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Companies\Schemas;
 
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\Toggle;
@@ -16,9 +17,11 @@ class CompanyForm
                 TextInput::make('name')
                     ->required()
                     ->maxLength(255),
-                TextInput::make('logo')
+                FileUpload::make('logo')
                     ->label('Logo')
-                    ->maxLength(65535),
+                    ->image()
+                    ->disk('public')
+                    ->directory('company/logo'),
                 TextInput::make('email')
                     ->email()
                     ->maxLength(255),

@@ -2,9 +2,11 @@
 
 namespace App\Filament\Resources\Companies;
 
+use App\Filament\Resources\Companies\Pages\ViewCompany;
 use App\Filament\Resources\Companies\Pages\EditCompany;
 use App\Filament\Resources\Companies\Pages\ListCompanies;
 use App\Filament\Resources\Companies\Schemas\CompanyForm;
+use App\Filament\Resources\Companies\Schemas\CompanyInfolist;
 use App\Models\Company;
 use BackedEnum;
 use Filament\Resources\Resource;
@@ -18,7 +20,7 @@ class CompanyResource extends Resource
     protected static ?string $model = Company::class;
 
     protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-building-office';
-    protected static string|\UnitEnum|null $navigationGroup = 'Master Data';
+    protected static string|\UnitEnum|null $navigationGroup = null;
     protected static ?string $navigationLabel = 'Company';
     protected static ?string $modelLabel = 'Company';
     protected static ?string $pluralModelLabel = 'Company';
@@ -27,6 +29,11 @@ class CompanyResource extends Resource
     public static function form(Schema $schema): Schema
     {
         return CompanyForm::configure($schema);
+    }
+
+    public static function infolist(Schema $schema): Schema
+    {
+        return CompanyInfolist::configure($schema);
     }
 
     public static function table(Table $table): Table
@@ -38,6 +45,7 @@ class CompanyResource extends Resource
     {
         return [
             'index' => ListCompanies::route('/'),
+            'view' => ViewCompany::route('/{record}'),
             'edit' => EditCompany::route('/{record}/edit'),
         ];
     }

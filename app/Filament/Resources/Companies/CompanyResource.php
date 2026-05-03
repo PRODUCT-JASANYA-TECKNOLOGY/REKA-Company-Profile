@@ -1,0 +1,52 @@
+<?php
+
+namespace App\Filament\Resources\Companies;
+
+use App\Filament\Resources\Companies\Pages\EditCompany;
+use App\Filament\Resources\Companies\Pages\ListCompanies;
+use App\Filament\Resources\Companies\Schemas\CompanyForm;
+use App\Models\Company;
+use BackedEnum;
+use Filament\Resources\Resource;
+use Filament\Schemas\Schema;
+use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\SoftDeletingScope;
+
+class CompanyResource extends Resource
+{
+    protected static ?string $model = Company::class;
+
+    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-building-office';
+    protected static string|\UnitEnum|null $navigationGroup = 'Master Data';
+    protected static ?string $navigationLabel = 'Company';
+    protected static ?string $modelLabel = 'Company';
+    protected static ?string $pluralModelLabel = 'Company';
+    protected static ?string $recordTitleAttribute = 'name';
+
+    public static function form(Schema $schema): Schema
+    {
+        return CompanyForm::configure($schema);
+    }
+
+    public static function table(Table $table): Table
+    {
+        return $table;
+    }
+
+    public static function getPages(): array
+    {
+        return [
+            'index' => ListCompanies::route('/'),
+            'edit' => EditCompany::route('/{record}/edit'),
+        ];
+    }
+
+    public static function getRecordRouteBindingEloquentQuery(): Builder
+    {
+        return parent::getRecordRouteBindingEloquentQuery()
+            ->withoutGlobalScopes([
+                SoftDeletingScope::class,
+            ]);
+    }
+}

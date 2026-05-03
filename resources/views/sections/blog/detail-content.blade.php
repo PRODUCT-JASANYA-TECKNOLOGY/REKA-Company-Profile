@@ -4,16 +4,16 @@
     <!-- Article -->
     <div class="lg:col-span-3">
       <div class="flex flex-wrap items-center gap-3 mb-5">
-        <span class="text-[0.7rem] font-semibold px-2.5 py-1 rounded-full bg-gray-950 text-white">{{ $article['cat'] }}</span>
-        <span class="text-xs text-gray-500 flex items-center gap-1"><i data-lucide="clock" class="w-3 h-3"></i> {{ $article['waktu'] }}</span>
-        <span class="text-xs text-gray-500 flex items-center gap-1"><i data-lucide="calendar" class="w-3 h-3"></i> {{ $article['tanggal'] }}</span>
+        <span class="text-[0.7rem] font-semibold px-2.5 py-1 rounded-full bg-gray-950 text-white">{{ $article['category_name'] }}</span>
+        <span class="text-xs text-gray-500 flex items-center gap-1"><i data-lucide="clock" class="w-3 h-3"></i> {{ $article['reading_time_label'] }}</span>
+        <span class="text-xs text-gray-500 flex items-center gap-1"><i data-lucide="calendar" class="w-3 h-3"></i> {{ $article['published_at_human'] }}</span>
       </div>
-      <h1 class="font-grotesk text-3xl sm:text-4xl font-bold tracking-[-0.03em] mb-6 leading-snug">{{ $article['judul'] }}</h1>
+      <h1 class="font-grotesk text-3xl sm:text-4xl font-bold tracking-[-0.03em] mb-6 leading-snug">{{ $article['title'] }}</h1>
       <div class="border-l-4 border-gray-200 pl-5 mb-8">
         <p class="text-lg leading-relaxed text-gray-500">{{ $article['excerpt'] }}</p>
       </div>
       <div class="prose-content">
-          {!! $article['isi'] !!}
+          {!! $article['content_html'] !!}
       </div>
       <!-- CTA box -->
       <div class="mt-10 p-7 rounded-xl bg-dark border border-dark-border">
@@ -27,9 +27,9 @@
       <div class="sticky top-24">
         <p class="text-[0.7rem] font-semibold uppercase tracking-widest text-gray-400 mb-4">Artikel Terkait</p>
         @foreach($related as $rel)
-        <a href="{{ route('blog.show', $rel['id']) }}" class="flex flex-col overflow-hidden rounded-xl border border-gray-200 mb-3 hover:shadow-md transition-shadow group">
-          <div class="h-24 overflow-hidden"><img src="{{ $rel['img'] }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="" /></div>
-          <div class="p-4"><span class="text-[0.65rem] font-bold text-gray-950">{{ $rel['cat'] }}</span><p class="font-grotesk text-sm font-semibold leading-snug mt-1">{{ $rel['judul'] }}</p></div>
+        <a href="{{ $rel['url'] }}" class="flex flex-col overflow-hidden rounded-xl border border-gray-200 mb-3 hover:shadow-md transition-shadow group">
+          <div class="h-24 overflow-hidden"><img src="{{ $rel['image_url'] }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="" /></div>
+          <div class="p-4"><span class="text-[0.65rem] font-bold text-gray-950">{{ $rel['category_name'] }}</span><p class="font-grotesk text-sm font-semibold leading-snug mt-1">{{ $rel['title'] }}</p></div>
         </a>
         @endforeach
         

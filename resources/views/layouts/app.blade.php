@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@yield('title', 'REKA — Solusi Digital Jasanya.id')</title>
-    <meta name="description" content="@yield('description', 'Mulai dari website, aplikasi, hingga sistem kompleks — REKA membantu bisnis Anda tumbuh dengan solusi digital yang scalable dan terpercaya.')">
+    <x-seo::meta />
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     {{-- Favicon --}}

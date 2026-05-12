@@ -31,4 +31,9 @@ class Klient extends Model
     {
         return $this->hasMany(Testimoni::class, 'klient_id');
     }
+
+    public function penawarans(): HasMany
+    {
+        return $this->hasMany(Penawaran::class, 'klient_id');
+    }
 }

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#858383",
+                        "secondary-container": "#316bf3",
+                        "secondary": "#0051d5",
+                        "on-tertiary-fixed": "#0b1c30",
+                        "on-tertiary-container": "#75859d",
+                        "on-tertiary-fixed-variant": "#38485d",
+                        "tertiary": "#000000",
+                        "surface-bright": "#f7f9fb",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#2d3133",
+                        "surface-tint": "#5f5e5e",
+                        "tertiary-container": "#0b1c30",
+                        "surface-variant": "#e0e3e5",
+                        "tertiary-fixed": "#d3e4fe",
+                        "surface-dim": "#d8dadc",
+                        "on-surface-variant": "#444748",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#474746",
+                        "error": "#ba1a1a",
+                        "primary-container": "#1c1b1b",
+                        "on-primary": "#ffffff",
+                        "background": "#f7f9fb",
+                        "surface": "#f7f9fb",
+                        "on-secondary-container": "#fefcff",
+                        "primary": "#000000",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-container-highest": "#e0e3e5",
+                        "outline-variant": "#c4c7c7",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-error-container": "#93000a",
+                        "on-surface": "#191c1e",
+                        "secondary-fixed": "#dbe1ff",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-high": "#e6e8ea",
+                        "tertiary-fixed-dim": "#b7c8e1",
+                        "inverse-primary": "#c8c6c5",
+                        "on-secondary-fixed-variant": "#003ea8",
+                        "error-container": "#ffdad6",
+                        "outline": "#747878",
+                        "on-background": "#191c1e",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "on-primary-fixed": "#1c1b1b",
+                        "secondary-fixed-dim": "#b4c5ff",
+                        "on-secondary-fixed": "#00174b",
+                        "primary-fixed": "#e5e2e1",
+                        "surface-container": "#eceef0",
+                        "on-error": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "section-gap": "2.5rem",
+                        "table-padding-y": "0.75rem",
+                        "item-gap": "1rem",
+                        "table-padding-x": "1.5rem",
+                        "container-max": "800px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "headline-xl": ["Inter"],
+                        "table-header": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-caps": ["11px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-md": ["14px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-sm": ["12px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-xl": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "table-header": ["12px", {"lineHeight": "1.4", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        @media print {
+            body { background: white; }
+            .invoice-canvas { box-shadow: none !important; border: none !important; margin: 0 !important; width: 100% !important; padding: 20px !important; }
+        }
+        /* A4 Page Simulation for Screen */
+        @media screen {
+            body { background: #f0f2f5; }
+            .invoice-canvas {
+                width: 210mm;
+                min-height: 297mm;
+                margin: 20px auto;
+            }
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased">
+<!-- Main Invoice Canvas (A4 Optimized) -->
+<main class="bg-surface-container-lowest p-16 shadow-sm border border-outline-variant invoice-canvas relative">
+<!-- Header Section -->
+<header class="flex justify-between items-start mb-12">
+<div class="flex flex-col gap-4">
+<div class="w-24 h-24 flex items-center justify-center">
+<img alt="Logo Reka" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uh02gH31qYjHlsBH034nZfMqPCEUMnMBdiJMxUi2Q9nsGB9nSZXSUon6eUI_KVSiI2XAzghGaAcvsXkRrEhdRROp6zbxKj9U50qlkNCjIIDJ-rd9-9DP7IFwYFIzK_7PagVdlgH_2sPF_N9cdHF0G4RySnkmLr8AQNdv_7w7xWP9qbOV2w_8XY-yrlS1wLwAJyDGFMe_l86kcEh6IXiBGbLS6jVrmiY2oAbQ0vB-llBNQGVwjL7cTpCfJyiFVQFnbAjcLvXty6p"/>
+</div>
+<div>
+<h1 class="font-headline-xl text-headline-xl uppercase tracking-tighter">INVOICE LAYANAN DIGITAL</h1>
+<p class="text-on-surface-variant font-body-sm mt-1">Digital Solutions Professional Agency</p>
+</div>
+</div>
+<div class="text-right">
+<div class="mb-4">
+<span class="font-label-caps text-label-caps text-on-primary-container block">NOMOR INVOICE</span>
+<span class="font-headline-lg text-headline-lg">#INV-2024-0801</span>
+</div>
+<div class="grid grid-cols-2 gap-x-8 gap-y-2 text-right">
+<div>
+<span class="font-label-caps text-label-caps text-on-primary-container block">TANGGAL TERBIT</span>
+<span class="font-body-md text-on-surface">12 Agustus 2024</span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-on-primary-container block">JATUH TEMPO</span>
+<span class="font-body-md text-on-surface">26 Agustus 2024</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Bill To Section -->
+<section class="mb-12 grid grid-cols-2 gap-12">
+<div>
+<span class="font-label-caps text-label-caps text-on-primary-container block mb-3">DITAGIHKAN KEPADA</span>
+<div class="font-body-md text-on-surface">
+<p class="font-bold text-lg">PT. Inovasi Teknologi Sejahtera</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 flex flex-col justify-center">
+<div class="flex items-center gap-3 text-secondary">
+<span class="material-symbols-outlined" data-icon="account_balance_wallet">account_balance_wallet</span>
+<span class="font-label-caps text-label-caps">METODE PEMBAYARAN</span>
+</div>
+<p class="font-body-md mt-2">Bank Central Asia (BCA)<br/>No. Rek: 8290-XXX-XXX<br/>A/N: Agency Digital Solutions</p>
+</div>
+</section>
+<!-- Service Table -->
+<section class="mb-12">
+<table class="w-full border-collapse">
+<thead>
+<tr class="border-b-2 border-primary text-left">
+<th class="py-4 px-2 font-table-header text-table-header uppercase tracking-wider w-1/2">Deskripsi Layanan</th>
+<th class="py-4 px-2 font-table-header text-table-header uppercase tracking-wider text-center">Jml</th>
+<th class="py-4 px-2 font-table-header text-table-header uppercase tracking-wider text-right">Harga Satuan</th>
+<th class="py-4 px-2 font-table-header text-table-header uppercase tracking-wider text-right">Total</th>
+</tr>
+</thead>
+<tbody>
+<!-- Category 1 -->
+<tr class="bg-surface-container-high">
+<td class="py-2 px-2 font-label-caps text-label-caps text-secondary" colspan="4">FITUR UMUM UNTUK PUBLIK</td>
+</tr>
+<tr class="border-b border-outline-variant">
+<td class="py-4 px-2 font-body-md">Halaman Utama Website</td>
+<td class="py-4 px-2 font-body-md text-center">1 paket</td>
+<td class="py-4 px-2 font-body-md text-right">Rp. 300.000</td>
+<td class="py-4 px-2 font-body-md text-right">Rp. 300.000</td>
+</tr>
+<tr class="border-b border-outline-variant">
+<td class="py-4 px-2 font-body-md">Halaman Tentang Kami</td>
+<td class="py-4 px-2 font-body-md text-center">1 paket</td>
+<td class="py-4 px-2 font-body-md text-right">Rp. 200.000</td>
+<td class="py-4 px-2 font-body-md text-right">Rp. 200.000</td>
+</tr>
+<tr class="border-b border-outline-variant">
+<td class="py-4 px-2 font-body-md">Halaman Blog</td>
+<td class="py-4 px-2 font-body-md text-center">1 paket</td>
+<td class="py-4 px-2 font-body-md text-right">Rp. 200.000</td>
+<td class="py-4 px-2 font-body-md text-right">Rp. 200.000</td>
+</tr>
+<tr class="border-b border-outline-variant">
+<td class="py-4 px-2 font-body-md">Halaman dan Katalog Produk</td>
+<td class="py-4 px-2 font-body-md text-center">1 paket</td>
+<td class="py-4 px-2 font-body-md text-right">Rp. 200.000</td>
+<td class="py-4 px-2 font-body-md text-right">Rp. 200.000</td>
+</tr>
+<tr class="border-b border-outline-variant">
+<td class="py-4 px-2 font-body-md">Halaman Kontak Atau Penawaran</td>
+<td class="py-4 px-2 font-body-md text-center">1 paket</td>
+<td class="py-4 px-2 font-body-md text-right">Rp. 100.000</td>
+<td class="py-4 px-2 font-body-md text-right">Rp. 100.000</td>
+</tr>
+<tr class="border-b border-outline-variant">
+<td class="py-4 px-2 font-body-md">Setup SEO Untuk Website</td>
+<td class="py-4 px-2 font-body-md text-center">1 paket</td>
+<td class="py-4 px-2 font-body-md text-right">Rp. 200.000</td>
+<td class="py-4 px-2 font-body-md text-right">Rp. 200.000</td>
+</tr>
+<!-- Category 2 -->
+<tr class="bg-surface-container-high">
+<td class="py-2 px-2 font-label-caps text-label-caps text-secondary" colspan="4">DASHBOARD ADMIN FITUR PRIVAT</td>
+</tr>
+<tr class="border-b border-outline-variant">
+<td class="py-4 px-2 font-body-md">Dashboard Admin (Statistik Produk/Blog)</td>
+<td class="py-4 px-2 font-body-md text-center">1 paket</td>
+<td class="py-4 px-2 font-body-md text-right">Rp. 100.000</td>
+<td class="py-4 px-2 font-body-md text-right">Rp. 100.000</td>
+</tr>
+<tr class="border-b border-outline-variant">
+<td class="py-4 px-2 font-body-md">Manajemen Katalog Produk (Tambah/Ubah/Hapus)</td>
+<td class="py-4 px-2 font-body-md text-center">1 paket</td>
+<td class="py-4 px-2 font-body-md text-right">Rp. 200.000</td>
+<td class="py-4 px-2 font-body-md text-right">Rp. 200.000</td>
+</tr>
+<tr class="border-b border-outline-variant">
+<td class="py-4 px-2 font-body-md">Manajemen Blog (Tambah/Ubah/Hapus)</td>
+<td class="py-4 px-2 font-body-md text-center">1 paket</td>
+<td class="py-4 px-2 font-body-md text-right">Rp. 200.000</td>
+<td class="py-4 px-2 font-body-md text-right">Rp. 200.000</td>
+</tr>
+</tbody>
+</table>
+</section>
+<!-- Summary Section -->
+<section class="flex justify-end mb-12">
+<div class="w-1/3 space-y-3">
+<div class="flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-on-primary-container">SUBTOTAL</span>
+<span class="font-body-md">Rp. 1.700.000</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-on-primary-container">PAJAK (0%)</span>
+<span class="font-body-md">Rp. 0</span>
+</div>
+<div class="pt-3 border-t-2 border-primary flex justify-between items-center">
+<span class="font-headline-lg text-headline-lg text-sm uppercase">TOTAL TAGIHAN</span>
+<span class="font-headline-lg text-headline-lg text-secondary">Rp. 1.700.000</span>
+</div>
+</div>
+</section>
+<!-- Footer & Signature -->
+<footer class="grid grid-cols-2 gap-12 pt-12 border-t border-outline-variant">
+<div>
+<span class="font-label-caps text-label-caps text-on-primary-container block mb-3">SYARAT &amp; KETENTUAN</span>
+<ul class="font-body-sm text-on-surface-variant list-disc pl-4 space-y-1">
+<li>Harap melakukan pembayaran dalam waktu 14 hari setelah menerima invoice ini.</li>
+<li>Layanan akan segera diaktifkan setelah konfirmasi pembayaran penuh.</li>
+<li>Sertakan nomor invoice #INV-2024-0801 dalam keterangan pembayaran Anda.</li>
+<li>Untuk pertanyaan lebih lanjut, silakan hubungi support@agency.co.id</li>
+</ul>
+</div>
+<div class="flex flex-col items-end justify-end">
+<span class="font-label-caps text-label-caps text-on-primary-container block mb-12 text-right">TANDA TANGAN RESMI</span>
+<div class="w-48 border-b border-on-surface mb-2"></div>
+<p class="font-body-md font-bold">Budi Santoso</p>
+<p class="font-body-sm text-on-surface-variant">Manajer Proyek</p>
+</div>
+</footer>
+<!-- PDF Footer Tag -->
+<div class="absolute bottom-4 left-16 right-16 flex justify-between text-[10px] text-on-surface-variant opacity-50 uppercase tracking-widest border-t border-outline-variant pt-2">
+<span>© 2024 Professional Billing Services</span>
+<span>Halaman 1 dari 1</span>
+</div>
+</main>
+</body></html>

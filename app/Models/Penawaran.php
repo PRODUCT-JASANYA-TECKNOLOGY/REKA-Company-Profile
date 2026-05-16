@@ -68,7 +68,7 @@ class Penawaran extends Model
     public static function generateNomorPenawaran(?Carbon $date = null): string
     {
         $date ??= now();
-        $prefix = 'PEN-'.$date->format('Ymd');
+        $prefix = 'INV-'.$date->format('Ymd');
 
         $latestNumber = static::query()
             ->where('nomor_penawaran', 'like', $prefix.'-%')

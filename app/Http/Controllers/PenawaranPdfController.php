@@ -35,8 +35,10 @@ class PenawaranPdfController extends Controller
 
     private function resolvePdfLogoPath(?string $logo): ?string
     {
+        $fallbackLogoPath = public_path('images/logo-pdf.jpg');
+
         if (blank($logo)) {
-            return null;
+            return is_file($fallbackLogoPath) ? $fallbackLogoPath : null;
         }
 
         $path = public_path('storage/' . ltrim($logo, '/'));
@@ -46,21 +48,21 @@ class PenawaranPdfController extends Controller
         }
 
         if (! is_file($path)) {
-            return null;
+            return is_file($fallbackLogoPath) ? $fallbackLogoPath : null;
         }
 
         $maxFileSize = 2 * 1024 * 1024;
         $imageSize = @getimagesize($path);
 
         if ($imageSize === false) {
-            return null;
+            return is_file($fallbackLogoPath) ? $fallbackLogoPath : null;
         }
 
         [$width, $height] = $imageSize;
         $pixelCount = $width * $height;
 
         if (filesize($path) > $maxFileSize || $pixelCount > 6_000_000) {
-            return null;
+            return is_file($fallbackLogoPath) ? $fallbackLogoPath : null;
         }
 
         return $path;

@@ -3,12 +3,12 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LayananController;
+use App\Http\Controllers\PenawaranPdfController;
 use App\Http\Controllers\ProsesController;
 use App\Http\Controllers\PortofolioController;
 use App\Http\Controllers\KontakController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\SeoSitemapController;
-
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/layanan', [LayananController::class, 'index'])->name('layanan');
 Route::get('/proses', [ProsesController::class, 'index'])->name('proses');
@@ -31,3 +31,5 @@ Route::prefix('blog')->name('blog.')->group(function () {
     Route::get('/{slug}', [App\Http\Controllers\BlogController::class, 'show'])->name('show');
 });
 
+Route::middleware('auth')->get('/admin/penawaran/{penawaran}/pdf', PenawaranPdfController::class)
+    ->name('penawaran.pdf');

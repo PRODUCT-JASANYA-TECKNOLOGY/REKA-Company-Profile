@@ -14,6 +14,7 @@ use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Components\Utilities\Get;
 use Filament\Schemas\Components\Utilities\Set;
 use Filament\Schemas\Schema;
+use Filament\Support\RawJs;
 use Illuminate\Support\Carbon;
 
 class PenawaranForm
@@ -81,23 +82,38 @@ class PenawaranForm
                                     ->numeric()
                                     ->default(1)
                                     ->required(),
-                                TextInput::make('jumlah_label')
-                                    ->label('Satuan')
-                                    ->placeholder('paket, pcs, jam')
+                                Hidden::make('jumlah_label')
                                     ->default('paket')
-                                    ->required()
-                                    ->maxLength(64),
+                                    ->dehydrateStateUsing(fn (): string => 'paket'),
+                                Placeholder::make('jumlah_label_preview')
+                                    ->label('Satuan')
+                                    ->content('paket'),
                                 TextInput::make('harga_satuan')
                                     ->label('Harga Satuan')
+                                    ->mask(RawJs::make(<<<'JS'
+                                        (() => {
+                                            const digits = ($input ?? '').toString().replace(/\D/g, '')
+
+                                            if (! digits.length) {
+                                                return ''
+                                            }
+
+                                            return digits.replace(/\B(?=(\d{3})+(?!\d))/g, '.')
+                                        })()
+                                    JS))
+                                    ->stripCharacters('.')
+                                    ->dehydrateStateUsing(fn ($state): int => (int) preg_replace('/\D+/', '', (string) $state))
                                     ->numeric()
+                                    ->inputMode('numeric')
                                     ->prefix('Rp')
                                     ->default(0)
+                                    ->formatStateUsing(fn ($state): ?string => filled($state) ? number_format((float) $state, 0, ',', '.') : null)
                                     ->required(),
                                 Placeholder::make('total_preview')
                                     ->label('Total')
                                     ->content(function (Get $get): string {
                                         $jumlah = (float) ($get('jumlah') ?? 0);
-                                        $hargaSatuan = (float) ($get('harga_satuan') ?? 0);
+                                        $hargaSatuan = (float) preg_replace('/\D+/', '', (string) ($get('harga_satuan') ?? 0));
 
                                         return 'Rp '.number_format($jumlah * $hargaSatuan, 0, ',', '.');
                                     }),

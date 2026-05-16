@@ -104,7 +104,7 @@ class Penawaran extends Model
                         return [
                             'deskripsi' => trim((string) data_get($subItem, 'deskripsi')),
                             'jumlah' => $quantity,
-                            'jumlah_label' => trim((string) data_get($subItem, 'jumlah_label')),
+                            'jumlah_label' => 'paket',
                             'harga_satuan' => $unitPrice,
                             'total' => $total,
                         ];

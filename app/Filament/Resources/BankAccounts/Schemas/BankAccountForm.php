@@ -28,6 +28,7 @@ class BankAccountForm
                         'OCBC' => 'OCBC',
                         'Permata Bank' => 'Permata Bank',
                         'SeaBank' => 'SeaBank',
+                        'BankJago' => 'Bank Jago',
                     ])
                     ->searchable()
                     ->required(),
